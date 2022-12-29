@@ -1437,6 +1437,7 @@
     <Content Include="Views\Sample\WebForm1.aspx" />
     <Content Include="Views\Shared\MenuTCRC.aspx" />
     <Content Include="Views\Shared\MenuTMRP.aspx" />
+    <Content Include="Views\tes\tes.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1505,6 +1506,13 @@
     </Compile>
     <Compile Include="Views\Shared\MenuTMRP.aspx.vb">
       <DependentUpon>MenuTMRP.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\tes\tes.aspx.designer.vb">
+      <DependentUpon>tes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\tes\tes.aspx.vb">
+      <DependentUpon>tes.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
