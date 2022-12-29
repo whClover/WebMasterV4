@@ -1434,6 +1434,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Views\Sample\Users.aspx" />
+    <Content Include="Views\Sample\WebForm1.aspx" />
     <Content Include="Views\Shared\MenuTCRC.aspx" />
     <Content Include="Views\Shared\MenuTMRP.aspx" />
     <Content Include="Web.config" />
@@ -1484,6 +1485,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Views\Sample\WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sample\WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Views\Shared\MenuTCRC.aspx.designer.vb">
       <DependentUpon>MenuTCRC.aspx</DependentUpon>
