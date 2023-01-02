@@ -146,6 +146,9 @@
     <Content Include="assets\images\logo-light.png" />
     <Content Include="assets\images\logo-sm-light.png" />
     <Content Include="assets\images\logo-sm.png" />
+    <Content Include="assets\images\logo\logo-tcrc.png" />
+    <Content Include="assets\images\logo\logo-tcrc2.png" />
+    <Content Include="assets\images\logo\Thiess.png" />
     <Content Include="assets\images\maintenance.png" />
     <Content Include="assets\images\profile-bg.jpg" />
     <Content Include="assets\images\small\img-1.jpg" />
@@ -1432,14 +1435,18 @@
     <Content Include="assets\libs\swiper\swiper.min.css" />
     <Content Include="assets\libs\wnumb\wNumb.min.js" />
     <Content Include="Default.aspx" />
-    <Content Include="Default_old.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Views\Sample\Users.aspx" />
+    <Content Include="LoginPage.aspx" />
     <Content Include="Views\Shared\MenuTCRC.aspx" />
     <Content Include="Views\Shared\MenuTMRP.aspx" />
+    <Content Include="Views\TCRC\Assembly\TemplateDetails.aspx" />
+    <Content Include="Views\TCRC\Assembly\TemplateList.aspx" />
+    <Content Include="Views\TCRC\index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Utility.vb" />
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
@@ -1467,13 +1474,6 @@
     <Compile Include="App_Code\SQLFunction.vb" />
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
-    <Compile Include="Default_old.aspx.designer.vb">
-      <DependentUpon>Default_old.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default_old.aspx.vb">
-      <DependentUpon>Default_old.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -1493,6 +1493,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="LoginPage.aspx.designer.vb">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.vb">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Views\Shared\MenuTCRC.aspx.designer.vb">
       <DependentUpon>MenuTCRC.aspx</DependentUpon>
     </Compile>
@@ -1505,6 +1512,27 @@
     </Compile>
     <Compile Include="Views\Shared\MenuTMRP.aspx.vb">
       <DependentUpon>MenuTMRP.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\TCRC\Assembly\TemplateDetails.aspx.designer.vb">
+      <DependentUpon>TemplateDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TCRC\Assembly\TemplateDetails.aspx.vb">
+      <DependentUpon>TemplateDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\TCRC\Assembly\TemplateList.aspx.designer.vb">
+      <DependentUpon>TemplateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TCRC\Assembly\TemplateList.aspx.vb">
+      <DependentUpon>TemplateList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\TCRC\index.aspx.designer.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TCRC\index.aspx.vb">
+      <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
@@ -1606,6 +1634,7 @@
     <Content Include="assets\libs\swiper\esm\svelte\swiper-slide.svelte" />
     <Content Include="assets\libs\swiper\esm\svelte\swiper.svelte" />
     <Content Include="assets\libs\wnumb\LICENSE.MD" />
+    <Content Include=".htaccess" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -1624,7 +1653,11 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Fabshop\" />
+    <Folder Include="Views\PER\" />
+    <Folder Include="Views\TMRP\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

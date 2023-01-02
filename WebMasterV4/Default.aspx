@@ -11,23 +11,6 @@
     <asp:PlaceHolder runat="server">
         <%: Styles.Render("~/Css") %>
     </asp:PlaceHolder>
-
-    <style>
-        .img-demo {
-            position: relative;
-            float: left;
-            background: #3a3a3a;
-            border: 1px solid rgba(0,0,0,.2);
-            width: auto;
-            min-width: 40px;
-            padding: 5px 10px;
-            color: #fff;
-            text-align: center;
-            line-height: 40px;
-            font-size: 15px;
-            border-radius: 4px;
-        }
-    </style>
 </head>
 <body data-layout="horizontal">
     <!-- Begin page -->
@@ -39,22 +22,11 @@
                         <!-- LOGO -->
                         <div class="navbar-brand-box">
                             <a href="index.html" class="logo logo-dark">
-                                <span class="logo-sm">
-                                    <img src="assets/images/logo-sm.png" alt="" height="22">
-                                </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-dark.png" alt="" height="22">
+                                    <img src="assets/images/logo/thiess.png" class="img-responsive" height="22">
                                 </span>
                             </a>
 
-                            <a href="index.html" class="logo logo-light">
-                                <span class="logo-sm">
-                                    <img src="assets/images/logo-sm.png" alt="" height="22">
-                                </span>
-                                <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="" height="22">
-                                </span>
-                            </a>
                         </div>
 
                         <button type="button" class="btn btn-sm px-3 font-size-16 d-lg-none header-item" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">

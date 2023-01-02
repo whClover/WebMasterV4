@@ -7,5 +7,7 @@ Public Module RouteConfig
             .AutoRedirectMode = RedirectMode.Permanent
         }
         routes.EnableFriendlyUrls(settings)
+
+
     End Sub
 End Module
