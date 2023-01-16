@@ -23,6 +23,60 @@ Partial Public Class Users
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''bSearch control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents bSearch As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''bExport control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents bExport As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''bGetCheck control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents bGetCheck As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''tFullName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents tFullName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''tUserID control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents tUserID As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''ddTitle control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddTitle As Global.System.Web.UI.WebControls.ListBox
+
+    '''<summary>
     '''gvUser control.
     '''</summary>
     '''<remarks>

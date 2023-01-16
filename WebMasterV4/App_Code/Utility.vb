@@ -1,4 +1,10 @@
-﻿Public Class Utility
+﻿Imports ClosedXML.Excel
+Imports SQLFunction
+Imports System.Data
+Imports System.Data.SqlClient
+Imports System.IO
+
+Public Class Utility
     Public Shared Function evar(ByVal val As Object, ByVal valtype As Integer, Optional vallen As Integer = 255) As String
         Dim eval As String
 
@@ -46,5 +52,45 @@
         End If
 
         Return eval
+    End Function
+
+    Public Shared Sub BindDataListBox(ByVal ObjName As ListBox, ByVal query As String, ByVal ObjText As String, ByVal ObjVal As String)
+        Dim dt As New DataTable
+        dt = SQLFunction.GetDataTable(query)
+        ObjName.DataSource = dt
+        ObjName.DataTextField = ObjText
+        ObjName.DataValueField = ObjVal
+        ObjName.DataBind()
+    End Sub
+
+    Public Shared Function ExportToExcelXML(ByVal str As String, ByVal title As String)
+
+        Dim t As String = ""
+
+        Try
+            Dim dt As DataTable = SQLFunction.GetDataTable(str)
+            Dim thetitle As String = title + ".xlsx"
+            Using wb As New XLWorkbook()
+                wb.Worksheets.Add(dt, title)
+                HttpContext.Current.Response.Clear()
+                HttpContext.Current.Response.Buffer = True
+                HttpContext.Current.Response.Charset = ""
+                HttpContext.Current.Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                HttpContext.Current.Response.AddHeader("content-disposition", "attachment;filename=" + thetitle)
+
+                Using MyMemoryStream As New MemoryStream()
+                    wb.SaveAs(MyMemoryStream)
+                    MyMemoryStream.WriteTo(HttpContext.Current.Response.OutputStream)
+                    HttpContext.Current.Response.Flush()
+                    HttpContext.Current.Response.End()
+                End Using
+            End Using
+
+        Catch ex As Exception
+            t = ex.Message
+        End Try
+
+        Return t
+
     End Function
 End Class

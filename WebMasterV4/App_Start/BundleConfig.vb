@@ -5,15 +5,24 @@ Public Class BundleConfig
         bundles.Add(New StyleBundle("~/Css").Include(
             "~/assets/css/bootstrap.min.css",
             "~/assets/css/icons.min.css",
-            "~/assets/css/app.min.css"
+            "~/assets/css/app.min.css",
+            "~/assets/costume/css/mycss.css",
+            "~/assets/libs/choices.js/public/assets/styles/choices.min.css",
+            "~/assets/libs/flatpickr/flatpickr.min.css"
         ))
 
         bundles.Add(New ScriptBundle("~/Scripts").Include(
             "~/assets/libs/bootstrap/js/bootstrap.bundle.min.js",
+            "~/assets/costume/js/jquery-3.6.3.min.js",
             "~/assets/libs/metismenujs/metismenujs.min.js",
             "~/assets/libs/simplebar/simplebar.min.js",
             "~/assets/libs/feather-icons/feather.min.js",
-            "~/assets/js/app.js"
+            "~/assets/js/app.js",
+            "~/assets/costume/multiselect/chosen.jquery.min.js",
+            "~/assets/costume/js/myjs.js",
+            "~/assets/libs/choices.js/public/assets/scripts/choices.min.js",
+            "~/assets/libs/flatpickr/flatpickr.min.js",
+            "~/assets/js/pages/form-advanced.init.js"
         ))
     End Sub
 End Class
