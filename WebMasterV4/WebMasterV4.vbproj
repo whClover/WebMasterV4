@@ -194,6 +194,8 @@
     <Content Include="assets\images\brands\github.png" />
     <Content Include="assets\images\brands\mail_chimp.png" />
     <Content Include="assets\images\brands\slack.png" />
+    <Content Include="assets\images\error.png" />
+    <Content Include="assets\images\error2.png" />
     <Content Include="assets\images\favicon.ico" />
     <Content Include="assets\images\flags\french.jpg" />
     <Content Include="assets\images\flags\germany.jpg" />
@@ -1500,6 +1502,7 @@
     <Content Include="Global.asax" />
     <Content Include="Views\Sample\Users.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="Views\Sample\UsersEdit.aspx" />
     <Content Include="Views\Shared\MenuTCRC.aspx" />
     <Content Include="Views\Shared\MenuTMRP.aspx" />
     <Content Include="Views\TCRC\Assembly\TemplateDetails.aspx" />
@@ -1508,6 +1511,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\GlobalString.vb" />
     <Compile Include="App_Code\Utility.vb" />
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -1561,6 +1565,13 @@
     <Compile Include="LoginPage.aspx.vb">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Sample\UsersEdit.aspx.designer.vb">
+      <DependentUpon>UsersEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sample\UsersEdit.aspx.vb">
+      <DependentUpon>UsersEdit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Views\Shared\MenuTCRC.aspx.designer.vb">
       <DependentUpon>MenuTCRC.aspx</DependentUpon>

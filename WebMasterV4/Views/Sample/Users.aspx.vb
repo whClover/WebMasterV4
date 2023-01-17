@@ -9,6 +9,7 @@ Public Class Users
     Inherits System.Web.UI.Page
 
     Public tempfilter As String = ""
+    Dim utility As New Utility(Me)
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             If Session("checkboxList") Is Nothing Then
@@ -34,6 +35,15 @@ Public Class Users
 
         If tFullName.Text <> String.Empty Then tempfilter = tempfilter + " and FullName like" + evar(tFullName.Text, 11)
         If tUserID.Text <> String.Empty Then tempfilter = tempfilter + " and UserID like" + evar(tUserID.Text, 11)
+
+        'special buat yang didalam
+        If Not gvUser.HeaderRow Is Nothing Then
+            Dim tUsername As TextBox = gvUser.HeaderRow.FindControl("tUsername")
+            Dim username As String = tUsername.Text
+            If username <> String.Empty Then tempfilter = tempfilter + " and Username like " + evar(username, 11)
+        End If
+        '===
+
         'If tJobTitle.Text <> String.Empty Then tempfilter = tempfilter + " and JobTitle like" + evar(tJobTitle.Text, 11)
         If title <> String.Empty Then tempfilter = " and JobTitle in(" & title & ")" & tempfilter
 
@@ -43,13 +53,18 @@ Public Class Users
     End Sub
 
     Private Sub GenerateData()
-        filtering()
-        Dim dt As New DataTable
-        Dim query As String = "select * from tbl_user" & tempfilter
-        'Dim theobject As GridView = CType(FindControl("gvUser"), GridView)
-        dt = GetDataTable(query)
-        gvUser.DataSource = dt
-        gvUser.DataBind()
+        Try
+            filtering()
+            Dim dt As New DataTable
+            Dim query As String = "select * from tbl_user" & tempfilter
+            dt = GetDataTable(query)
+            gvUser.DataSource = dt
+            gvUser.DataBind()
+            lcount.Text = gvUser.Rows.Count.ToString() + " Records Found"
+        Catch ex As Exception
+            Dim currentPageName As String = System.IO.Path.GetFileName(Request.Url.AbsolutePath) & ".aspx"
+            lerror.Text = errPicker(currentPageName, ex.Message)
+        End Try
     End Sub
 
     Sub GenerateJobTitle()
@@ -104,5 +119,18 @@ Public Class Users
         Dim str As String = "select * from tbl_User" & tempfilter
 
         ExportToExcelXML(str, "sample")
+    End Sub
+
+    Protected Sub bAdd_Click(sender As Object, e As EventArgs)
+        'Dim sample As String = "$('#sampleModal1').modal('show');"
+        'Page.ClientScript.RegisterStartupScript(Me.GetType(), "script", sample)
+
+        Utility.ModalV1("UsersEdit.aspx")
+    End Sub
+
+    Protected Sub bEdit_Click(sender As Object, e As EventArgs)
+        Dim button As Button = CType(sender, Button)
+        Dim eid As String = button.Text
+        utility.ModalV1("UsersEdit.aspx", "id=" & eid)
     End Sub
 End Class

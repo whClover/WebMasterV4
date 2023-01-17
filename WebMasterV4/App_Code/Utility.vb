@@ -3,6 +3,8 @@ Imports SQLFunction
 Imports System.Data
 Imports System.Data.SqlClient
 Imports System.IO
+Imports GlobalString
+Imports DocumentFormat.OpenXml.Math
 
 Public Class Utility
     Public Shared Function evar(ByVal val As Object, ByVal valtype As Integer, Optional vallen As Integer = 255) As String
@@ -92,5 +94,46 @@ Public Class Utility
 
         Return t
 
+    End Function
+
+    Public Shared Function errPicker(ByVal filename As String, ByVal errormsg As String)
+        Dim str_Return As String
+
+        str_Return = "<strong>Error Occured. Please Capture This Error and Send to TRahayu@thiess.co.id and MISetiawan@thiess.co.id</strong><br/> " _
+                    & "Page: " & filename & "<br />" _
+                    & "Error: " & errormsg
+
+        Return str_Return
+    End Function
+
+    Private _page As Page
+    Public Sub New(ByVal currentPage As Page)
+        _page = currentPage
+    End Sub
+    Public Function ModalV1(ByVal url As String, Optional param1 As String = "", Optional param2 As String = "")
+        Try
+            Dim eParam As String = ""
+            If param1 <> String.Empty Then eParam = eParam & "?" & param1
+            If param2 <> String.Empty Then eParam = eParam & "&" & param2
+
+            If Len(eParam) > 0 Then
+                url = url & eParam
+            End If
+
+            Dim eJScript As String = "window.open('" & url & "','_blank'," & GlobalString.popupsize & ")"
+            _page.ClientScript.RegisterStartupScript(_page.GetType(), "script", eJScript, True)
+            Return 0
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+    End Function
+
+    Public Function closeMe()
+        Try
+            _page.ClientScript.RegisterStartupScript(Me.GetType(), "closeTab", "window.close();", True)
+            Return 0
+        Catch ex As Exception
+            Return ex.Message
+        End Try
     End Function
 End Class

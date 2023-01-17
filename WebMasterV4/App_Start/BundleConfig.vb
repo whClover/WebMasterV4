@@ -24,5 +24,9 @@ Public Class BundleConfig
             "~/assets/libs/flatpickr/flatpickr.min.js",
             "~/assets/js/pages/form-advanced.init.js"
         ))
+
+        bundles.Add(New ScriptBundle("~/jquery").Include(
+            "~/assets/costume/js/jquery-3.6.3.min.js"
+        ))
     End Sub
 End Class

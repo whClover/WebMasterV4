@@ -11,6 +11,10 @@
     <asp:PlaceHolder runat="server">
         <%: Styles.Render("~/Css") %>
     </asp:PlaceHolder>
+
+    <asp:PlaceHolder runat="server">
+        <%= Scripts.Render("~/jquery") %>
+    </asp:PlaceHolder>
 </head>
 <body data-layout="horizontal">
     <div id="layout-wrapper">

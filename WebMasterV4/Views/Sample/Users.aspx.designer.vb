@@ -32,6 +32,15 @@ Partial Public Class Users
     Protected WithEvents bSearch As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''bAdd control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents bAdd As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
     '''bExport control.
     '''</summary>
     '''<remarks>
@@ -75,6 +84,24 @@ Partial Public Class Users
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddTitle As Global.System.Web.UI.WebControls.ListBox
+
+    '''<summary>
+    '''lcount control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lcount As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lerror control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lerror As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''gvUser control.
