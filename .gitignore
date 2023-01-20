@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/WebMasterV4.sln
+/WebMasterV4/WebMasterV4.vbproj
