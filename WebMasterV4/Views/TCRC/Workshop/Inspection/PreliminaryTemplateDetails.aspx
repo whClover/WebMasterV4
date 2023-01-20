@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="TemplateList.aspx.vb" Inherits="WebMasterV4.ListTemplate" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="PreliminaryTemplateDetails.aspx.vb" Inherits="WebMasterV4.PreliminaryTemplateDetails" %>
 
 <!DOCTYPE html>
 

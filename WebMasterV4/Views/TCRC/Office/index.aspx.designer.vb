@@ -12,7 +12,7 @@ Option Explicit On
 
 
 
-Partial Public Class TemplateDetails
+Partial Public Class index1
 
     '''<summary>
     '''form1 control.

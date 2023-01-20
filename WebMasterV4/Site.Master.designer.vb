@@ -14,6 +14,24 @@ Option Explicit On
 Partial Public Class Site
 
     '''<summary>
+    '''sFullName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents sFullName As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''sEmail control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents sEmail As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''MenuContent control.
     '''</summary>
     '''<remarks>

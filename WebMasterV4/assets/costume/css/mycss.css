@@ -1,3 +1,7 @@
 ﻿.gridview > :not(caption) > * > * {
     padding: 1px !important;
 }
+
+.scroll {
+    transition: all 0.3s ease-in-out;
+}

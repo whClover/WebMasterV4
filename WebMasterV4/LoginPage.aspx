@@ -46,7 +46,7 @@
                                                     </div>
                                                     <div class="form-floating form-floating-custom mb-3">
                                                         <asp:TextBox runat="server" CssClass="form-control" placeholder="Enter Username/JDE" ID="tjdeuser" AutoCompleteType="Disabled"></asp:TextBox>
-                                                        <label for="input-username">Username/JDE</label>
+                                                        <label for="input-username">Username / JDE Numbers</label>
                                                         <div class="form-floating-icon">
                                                             <i class="uil uil-users-alt"></i>
                                                         </div>

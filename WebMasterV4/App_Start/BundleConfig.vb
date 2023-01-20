@@ -13,7 +13,9 @@ Public Class BundleConfig
 
         bundles.Add(New ScriptBundle("~/Scripts").Include(
             "~/assets/libs/bootstrap/js/bootstrap.bundle.min.js",
+            "~/assets/costume/js/boostrap5-alpha.js",
             "~/assets/costume/js/jquery-3.6.3.min.js",
+            "~/assets/costume/js/jquery-ui.min.js",
             "~/assets/libs/metismenujs/metismenujs.min.js",
             "~/assets/libs/simplebar/simplebar.min.js",
             "~/assets/libs/feather-icons/feather.min.js",
@@ -22,7 +24,8 @@ Public Class BundleConfig
             "~/assets/costume/js/myjs.js",
             "~/assets/libs/choices.js/public/assets/scripts/choices.min.js",
             "~/assets/libs/flatpickr/flatpickr.min.js",
-            "~/assets/js/pages/form-advanced.init.js"
+            "~/assets/js/pages/form-advanced.init.js",
+            "~/assets/costume/js/marquee.js"
         ))
 
         bundles.Add(New ScriptBundle("~/jquery").Include(

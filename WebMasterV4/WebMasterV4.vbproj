@@ -169,6 +169,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\costume\css\mycss.css" />
+    <Content Include="assets\costume\js\boostrap5-alpha.js" />
+    <Content Include="assets\costume\js\jquery-ui.min.js" />
+    <Content Include="assets\costume\js\marquee.js" />
     <Content Include="assets\costume\js\myjs.js" />
     <Content Include="assets\costume\multiselect\chosen.css" />
     <Content Include="assets\costume\multiselect\chosen.jquery.min.js" />
@@ -203,6 +206,10 @@
     <Content Include="assets\images\flags\russia.jpg" />
     <Content Include="assets\images\flags\spain.jpg" />
     <Content Include="assets\images\flags\us.jpg" />
+    <Content Include="assets\images\Icon\assembling.png" />
+    <Content Include="assets\images\Icon\calendar.png" />
+    <Content Include="assets\images\Icon\Inspection.png" />
+    <Content Include="assets\images\Icon\spare-parts.png" />
     <Content Include="assets\images\illustrator\1.png" />
     <Content Include="assets\images\illustrator\2.png" />
     <Content Include="assets\images\illustrator\3.png" />
@@ -1498,6 +1505,7 @@
     <Content Include="assets\libs\swiper\swiper.esm.js" />
     <Content Include="assets\libs\swiper\swiper.min.css" />
     <Content Include="assets\libs\wnumb\wNumb.min.js" />
+    <Content Include="data\WOActivity.txt" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Views\Sample\Users.aspx" />
@@ -1505,9 +1513,13 @@
     <Content Include="Views\Sample\UsersEdit.aspx" />
     <Content Include="Views\Shared\MenuTCRC.aspx" />
     <Content Include="Views\Shared\MenuTMRP.aspx" />
-    <Content Include="Views\TCRC\Assembly\TemplateDetails.aspx" />
-    <Content Include="Views\TCRC\Assembly\TemplateList.aspx" />
     <Content Include="Views\TCRC\index.aspx" />
+    <Content Include="Views\TCRC\Office\index.aspx" />
+    <Content Include="Views\TCRC\Workshop\index.aspx" />
+    <Content Include="Views\TCRC\Workshop\Inspection\InspectionWODetails.aspx" />
+    <Content Include="Views\TCRC\Workshop\Inspection\InspectionWOList.aspx" />
+    <Content Include="Views\TCRC\Workshop\Inspection\PreliminaryTemplateDetails.aspx" />
+    <Content Include="Views\TCRC\Workshop\Inspection\PreliminaryTemplateList.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1587,25 +1599,53 @@
       <DependentUpon>MenuTMRP.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Views\TCRC\Assembly\TemplateDetails.aspx.designer.vb">
-      <DependentUpon>TemplateDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TCRC\Assembly\TemplateDetails.aspx.vb">
-      <DependentUpon>TemplateDetails.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Views\TCRC\Assembly\TemplateList.aspx.designer.vb">
-      <DependentUpon>TemplateList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TCRC\Assembly\TemplateList.aspx.vb">
-      <DependentUpon>TemplateList.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="Views\TCRC\index.aspx.designer.vb">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\TCRC\index.aspx.vb">
       <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\TCRC\Office\index.aspx.designer.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TCRC\Office\index.aspx.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\index.aspx.designer.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\index.aspx.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\InspectionWODetails.aspx.designer.vb">
+      <DependentUpon>InspectionWODetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\InspectionWODetails.aspx.vb">
+      <DependentUpon>InspectionWODetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\InspectionWOList.aspx.designer.vb">
+      <DependentUpon>InspectionWOList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\InspectionWOList.aspx.vb">
+      <DependentUpon>InspectionWOList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\PreliminaryTemplateDetails.aspx.designer.vb">
+      <DependentUpon>PreliminaryTemplateDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\PreliminaryTemplateDetails.aspx.vb">
+      <DependentUpon>PreliminaryTemplateDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\PreliminaryTemplateList.aspx.designer.vb">
+      <DependentUpon>PreliminaryTemplateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\PreliminaryTemplateList.aspx.vb">
+      <DependentUpon>PreliminaryTemplateList.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
@@ -1730,6 +1770,9 @@
   <ItemGroup>
     <Folder Include="Views\Fabshop\" />
     <Folder Include="Views\PER\" />
+    <Folder Include="Views\TCRC\Workshop\Assembly\" />
+    <Folder Include="Views\TCRC\Workshop\Partlist\" />
+    <Folder Include="Views\TCRC\Workshop\Timesheet\" />
     <Folder Include="Views\TMRP\" />
   </ItemGroup>
   <PropertyGroup>

@@ -81,81 +81,53 @@
                         <!-- end page title -->
 
                         <div class="row">
-                            <div class="col-xl-4">
+                            <div class="col-md-2">
                                 <div class="card">
                                     <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-sm-7">
-                                                <span class="fw-bold font-size-16">Component Rebuilt Center</span>
-                                                <p class="fst-italic">Web Applications</p>
-                                                <div class="mt-4">
-                                                    <a href="pricing-basic.html" class="btn btn-primary">Open !</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-5 text-center">
-                                                <img src="assets/images/logo/logo-tcrc.png" class="img-fluid w-75" alt="" />
+                                        <div class="box">
+                                            <div class="text-center">
+                                                <img src="assets/images/logo/logo-tcrc.png" class="img-fluid mb-3" style="width:40%" /> <br />
+                                                <a runat="server" href="~/LoginPage.aspx?id=1" type="text/html" class="mt-3">TCRC Web Applications</a>
                                             </div>
                                         </div>
-                                    </div> <!-- end card-body-->
-                                </div>
-                                <!-- end card -->
+                                    </div>
+                                </div>                                         
                             </div>
-                            <div class="col-xl-4">
+                            <div class="col-md-2">
                                 <div class="card">
                                     <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-sm-7">
-                                                <span class="fw-bold font-size-16">Plant External Repair</span>
-                                                <p class="fst-italic">Web Applications</p>
-                                                <div class="mt-4">
-                                                    <a href="pricing-basic.html" class="btn btn-primary">Open !</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-5 text-center">
-                                                <img src="assets/images/illustrator/2.png" class="img-fluid" alt="" />
+                                        <div class="box">
+                                            <div class="text-center">
+                                                <img src="assets/images/illustrator/2.png" class="img-fluid mb-3" style="width:45%" /> <br />
+                                                <a runat="server" href="~/LoginPage.aspx?id=2" type="text/html" class="mt-3">PER Web Applications</a>
                                             </div>
                                         </div>
-                                    </div> <!-- end card-body-->
-                                </div>
-                                <!-- end card -->
+                                    </div>
+                                </div>                                         
                             </div>
-                            <div class="col-xl-4">
+                            <div class="col-md-2">
                                 <div class="card">
                                     <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-sm-7">
-                                                <span class="fw-bold font-size-16">Machine Rebuilt Program</span>
-                                                <p class="fst-italic">Web Applications</p>
-                                                <div class="mt-4">
-                                                    <a href="pricing-basic.html" class="btn btn-primary">Open !</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-5 text-center">
-                                                <img src="assets/images/illustrator/2.png" class="img-fluid" alt="" />
+                                        <div class="box">
+                                            <div class="text-center">
+                                                <img src="assets/images/illustrator/2.png" class="img-fluid mb-3" style="width:45%" /> <br />
+                                                <a runat="server" href="~/LoginPage.aspx?id=3" type="text/html" class="mt-3">TMRP Web Applications</a>
                                             </div>
                                         </div>
-                                    </div> <!-- end card-body-->
-                                </div>
-                                <!-- end card -->
+                                    </div>
+                                </div>                                         
                             </div>
-                            <div class="col-xl-4">
+                            <div class="col-md-2">
                                 <div class="card">
                                     <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-sm-7">
-                                                <span class="fw-bold font-size-16">Fabrications Shop</span>
-                                                <p class="fst-italic">Web Applications</p>
-                                                <div class="mt-4">
-                                                    <a href="pricing-basic.html" class="btn btn-primary">Open !</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-5 text-center">
-                                                <img src="assets/images/illustrator/2.png" class="img-fluid" alt="" />
+                                        <div class="box">
+                                            <div class="text-center">
+                                                <img src="assets/images/illustrator/2.png" class="img-fluid mb-3" style="width:45%" /> <br />
+                                                <a runat="server" href="~/LoginPage.aspx?id=4" type="text/html" class="mt-3">Fabshop Web Applications</a>
                                             </div>
                                         </div>
-                                    </div> <!-- end card-body-->
-                                </div>
-                                <!-- end card -->
+                                    </div>
+                                </div>                                         
                             </div>
                         </div>
                         

@@ -12,7 +12,7 @@ Option Explicit On
 
 
 
-Partial Public Class ListTemplate
+Partial Public Class PreliminaryTemplateDetails
 
     '''<summary>
     '''form1 control.
