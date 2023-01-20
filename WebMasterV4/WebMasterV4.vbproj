@@ -1516,10 +1516,7 @@
     <Content Include="Views\TCRC\index.aspx" />
     <Content Include="Views\TCRC\Office\index.aspx" />
     <Content Include="Views\TCRC\Workshop\index.aspx" />
-    <Content Include="Views\TCRC\Workshop\Inspection\InspectionWODetails.aspx" />
-    <Content Include="Views\TCRC\Workshop\Inspection\InspectionWOList.aspx" />
-    <Content Include="Views\TCRC\Workshop\Inspection\PreliminaryTemplateDetails.aspx" />
-    <Content Include="Views\TCRC\Workshop\Inspection\PreliminaryTemplateList.aspx" />
+    <Content Include="Views\TCRC\Workshop\Inspection\MeaInspTemplate.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1620,32 +1617,11 @@
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Views\TCRC\Workshop\Inspection\InspectionWODetails.aspx.designer.vb">
-      <DependentUpon>InspectionWODetails.aspx</DependentUpon>
+    <Compile Include="Views\TCRC\Workshop\Inspection\MeaInspTemplate.aspx.designer.vb">
+      <DependentUpon>MeaInspTemplate.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\TCRC\Workshop\Inspection\InspectionWODetails.aspx.vb">
-      <DependentUpon>InspectionWODetails.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Views\TCRC\Workshop\Inspection\InspectionWOList.aspx.designer.vb">
-      <DependentUpon>InspectionWOList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TCRC\Workshop\Inspection\InspectionWOList.aspx.vb">
-      <DependentUpon>InspectionWOList.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Views\TCRC\Workshop\Inspection\PreliminaryTemplateDetails.aspx.designer.vb">
-      <DependentUpon>PreliminaryTemplateDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TCRC\Workshop\Inspection\PreliminaryTemplateDetails.aspx.vb">
-      <DependentUpon>PreliminaryTemplateDetails.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Views\TCRC\Workshop\Inspection\PreliminaryTemplateList.aspx.designer.vb">
-      <DependentUpon>PreliminaryTemplateList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TCRC\Workshop\Inspection\PreliminaryTemplateList.aspx.vb">
-      <DependentUpon>PreliminaryTemplateList.aspx</DependentUpon>
+    <Compile Include="Views\TCRC\Workshop\Inspection\MeaInspTemplate.aspx.vb">
+      <DependentUpon>MeaInspTemplate.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

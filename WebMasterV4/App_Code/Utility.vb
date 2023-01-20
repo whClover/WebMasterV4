@@ -56,6 +56,15 @@ Public Class Utility
         Return eval
     End Function
 
+    Public Shared Sub BindDataDropDown(ByVal ObjName As DropDownList, ByVal query As String, ByVal ObjText As String, ByVal ObjVal As String)
+        Dim dt As New DataTable
+        dt = SQLFunction.GetDataTable(query)
+        ObjName.DataSource = dt
+        ObjName.DataTextField = ObjText
+        ObjName.DataValueField = ObjVal
+        ObjName.DataBind()
+    End Sub
+
     Public Shared Sub BindDataListBox(ByVal ObjName As ListBox, ByVal query As String, ByVal ObjText As String, ByVal ObjVal As String)
         Dim dt As New DataTable
         dt = SQLFunction.GetDataTable(query)

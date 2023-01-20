@@ -22,7 +22,6 @@
             </div>
         </div>
         <!-- end page title -->
-
         <div class="row">
             <div class="col-xl-3 col-sm-6">
                 <div class="card shadow-none border">
@@ -48,12 +47,22 @@
                             <ul class="list-unstyled categories-list">
                                 <li>
                                     <a href="javascript: void(0);" class="text-body bg-light d-flex align-items-center">
-                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Inspection Worksheet</span> 
+                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Measurement Inspection Worksheet</span> 
+                                    </a>
+                                </li>                                
+                                <li>
+                                    <a href="javascript: void(0);" class="text-body bg-light d-flex align-items-center">
+                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Measurement Inspection Template</span> 
                                     </a>
                                 </li>
                                 <li>
                                     <a href="javascript: void(0);" class="text-body bg-light d-flex align-items-center">
-                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Inspection Template</span>
+                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Preliminary Inspection Worksheet</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);" class="text-body bg-light d-flex align-items-center">
+                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Preliminary Inspection Template</span>
                                     </a>
                                 </li>
                             </ul>
