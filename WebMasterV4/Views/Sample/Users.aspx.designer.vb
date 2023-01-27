@@ -59,6 +59,15 @@ Partial Public Class Users
     Protected WithEvents bGetCheck As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''UsersEditV2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents UsersEditV2 As Global.WebMasterV4.UsersEditV2
+
+    '''<summary>
     '''tFullName control.
     '''</summary>
     '''<remarks>

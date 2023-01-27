@@ -1,30 +1,41 @@
 ﻿Imports ClosedXML.Excel
-Imports SQLFunction
+Imports WebMasterV4.SQLFunction
 Imports System.Data
 Imports System.Data.SqlClient
 Imports System.IO
-Imports GlobalString
+Imports WebMasterV4.GlobalString
 Imports DocumentFormat.OpenXml.Math
+Imports System.Security.Policy
 
 Public Class Utility
     Public Shared Function evar(ByVal val As Object, ByVal valtype As Integer, Optional vallen As Integer = 255) As String
         Dim eval As String
 
+        val = Replace(val, """", "")
+        val = Replace(val, "#N/A", "")
+        val = LTrim(val)
+        val = RTrim(val)
+
+
         If val Is vbNullString Then
-            eval = ""
-        ElseIf val = "" Then
             eval = "NULL"
-        ElseIf val = String.Empty Then
+        ElseIf CStr(val) = "" Then
+            eval = "NULL"
+        ElseIf CStr(val) = " " Then
+            eval = "NULL"
+        ElseIf CStr(val) = String.Empty Then
             eval = "NULL"
         Else
             val = Trim(val)
             Select Case valtype
-                Case 0 : eval = val
-                    'Case 2 : eval = "'" & Format(val, "YYYY-MM-DD") & "'"
-                    'Case 2 : eval = "'" & DatePart("yyyy", val) + "-" + DatePart("m", val) + "-" & DatePart("d", val) & "'"
+                Case 0
+                    'eval = val
+                    If IsNumeric(val) = True Then
+                        eval = val
+                    Else
+                        eval = "NULL"
+                    End If
                 Case 2
-
-
                     If IsDate(val) = False Then
                         eval = "NULL"
                     Else
@@ -42,7 +53,8 @@ Public Class Utility
                 Case 4 : eval = "'" & Left(val, 3750) & "'"
 
                 Case 11 : eval = "'%" & Left(val, vallen) & "%'"
-
+                Case 12 : eval = "'" & Replace(val, ",", "','") & "'"
+                Case 13 : eval = "'%," & Left(val, vallen) & ",%'"
                 Case 14 : eval = "" & val & ""
 
                 Case Else : eval = "'" & Left(val, vallen) & "'"
@@ -54,6 +66,7 @@ Public Class Utility
         End If
 
         Return eval
+
     End Function
 
     Public Shared Sub BindDataDropDown(ByVal ObjName As DropDownList, ByVal query As String, ByVal ObjText As String, ByVal ObjVal As String)
@@ -63,6 +76,7 @@ Public Class Utility
         ObjName.DataTextField = ObjText
         ObjName.DataValueField = ObjVal
         ObjName.DataBind()
+        ObjName.Items.Insert(0, New ListItem(""))
     End Sub
 
     Public Shared Sub BindDataListBox(ByVal ObjName As ListBox, ByVal query As String, ByVal ObjText As String, ByVal ObjVal As String)
@@ -137,6 +151,26 @@ Public Class Utility
         End Try
     End Function
 
+    Public Function ModalV2(ByVal fileName As String)
+        _page.ClientScript.RegisterStartupScript(_page.GetType(), "showmodal", "$('#" & fileName & "').modal('show');", True)
+        Return 0
+    End Function
+
+    Public Shared Function err_handler(ByVal pageName As String, ByVal subFun As String, ByVal err As String)
+        HttpContext.Current.Response.Redirect(urlError & "?page=" & pageName & "&subfun=" & subFun & "&err=" & err)
+    End Function
+
+    Public Function ModalV1Error(ByVal pageName As String, ByVal subfun As String, ByVal errDesc As String)
+        Try
+            Dim modErorr As String = "~/Views/Shared/ErrorPage.aspx?page=" & pageName & "&err=" & errDesc & "subfun=" & subfun
+            Dim eJScript As String = "window.open('" & modErorr & "','_blank'," & GlobalString.popupsize & ")"
+            _page.ClientScript.RegisterStartupScript(_page.GetType(), "script", eJScript, True)
+            Return 0
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+    End Function
+
     Public Function closeMe()
         Try
             _page.ClientScript.RegisterStartupScript(Me.GetType(), "closeTab", "window.close();", True)
@@ -144,5 +178,40 @@ Public Class Utility
         Catch ex As Exception
             Return ex.Message
         End Try
+    End Function
+
+    Public Shared Function IsSessionExist(ByVal sessionName As String) As Boolean
+        If HttpContext.Current.Session(sessionName) Is Nothing Then
+            HttpContext.Current.Response.Redirect(GlobalString.urlTCRCLogin)
+            Return False
+        Else
+            Return True
+        End If
+    End Function
+
+    Public Shared Function eByName() As String
+        If IsSessionExist("ss_userid") Then
+            eByName = HttpContext.Current.Session("ss_username").ToString
+            Return eByName
+        End If
+    End Function
+
+    Public Shared Function CheckDBNull(ByVal value As Object) As String
+        If value Is DBNull.Value OrElse value Is Nothing Then
+            Return ""
+        Else
+            Return value
+        End If
+    End Function
+
+    Public Shared Function GetCurrentPageName() As String
+        Dim currentPage As Page = DirectCast(HttpContext.Current.Handler, Page)
+        Return Path.GetFileName(currentPage.AppRelativeVirtualPath)
+    End Function
+
+    Public Shared Function GetCurrentMethodName() As String
+        Dim st As New System.Diagnostics.StackTrace()
+        Dim sf As System.Diagnostics.StackFrame = st.GetFrame(1)
+        Return sf.GetMethod().Name
     End Function
 End Class

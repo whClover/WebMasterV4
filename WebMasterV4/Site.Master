@@ -12,8 +12,9 @@
         <%: Styles.Render("~/Css") %>
     </asp:PlaceHolder>
 
+
     <asp:PlaceHolder runat="server">
-        <%= Scripts.Render("~/jquery") %>
+        <%= Scripts.Render("~/buatmodal") %>
     </asp:PlaceHolder>
 </head>
 <body data-layout="horizontal">
@@ -68,7 +69,6 @@
                     <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
                     <!-- End Dynamic Content -->
 
-                        
                 </div> <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
@@ -95,5 +95,6 @@
 <asp:PlaceHolder runat="server">
     <%= Scripts.Render("~/Scripts") %>
 </asp:PlaceHolder>
+
 </body>
 </html>

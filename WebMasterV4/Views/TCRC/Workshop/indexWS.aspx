@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Workshop Page" MasterPageFile="~/Site.Master" Language="vb" AutoEventWireup="false" CodeBehind="index.aspx.vb" Inherits="WebMasterV4.index2" %>
+﻿<%@ Page Title="Workshop Page" MasterPageFile="~/Site.Master" Language="vb" AutoEventWireup="false" CodeBehind="indexWS.aspx.vb" Inherits="WebMasterV4.indexWS" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MenuContent">
     <!-- #include file = "~/Views/Shared/MenuTCRC.aspx" -->
@@ -51,7 +51,7 @@
                                     </a>
                                 </li>                                
                                 <li>
-                                    <a href="javascript: void(0);" class="text-body bg-light d-flex align-items-center">
+                                    <a href="~/Views/TCRC/Workshop/Inspection/MeaInspTemplate.aspx" runat="server" class="text-body bg-light d-flex align-items-center">
                                         <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Measurement Inspection Template</span> 
                                     </a>
                                 </li>

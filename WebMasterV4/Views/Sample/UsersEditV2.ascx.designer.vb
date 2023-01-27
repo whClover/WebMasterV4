@@ -11,104 +11,86 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class MeaInspTemplate
+Partial Public Class UsersEditV2
 
     '''<summary>
-    '''form1 control.
+    '''Panel1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents Panel1 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''bSearch control.
+    '''userid control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents bSearch As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents userid As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
-    '''bAdd control.
+    '''tUsername control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents bAdd As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents tUsername As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''MeaTemplateEdit control.
+    '''tFullname control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents MeaTemplateEdit As Global.WebMasterV4.MeaTemplateEdit
+    Protected WithEvents tFullname As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''tDesc control.
+    '''tEmailAddress control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents tDesc As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents tEmailAddress As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''ddComp control.
+    '''tJobTitle control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ddComp As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents tJobTitle As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''ddUnitDesc control.
+    '''lNotif control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ddUnitDesc As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents lNotif As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''lcount control.
+    '''bSave control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lcount As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents bSave As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''lerror control.
+    '''Button1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lerror As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''tes control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents tes As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''gvInsp control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents gvInsp As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 End Class

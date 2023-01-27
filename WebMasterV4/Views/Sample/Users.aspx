@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="Users Page" MasterPageFile="~/Site.Master" Language="vb" AutoEventWireup="false" CodeBehind="Users.aspx.vb" Inherits="WebMasterV4.Users" %>
 <%@ Import Namespace="System.Web.UI.WebControls" %>
+<%@ Register Src="~/Views/Sample/UsersEditV2.ascx" TagPrefix="uc1" TagName="UsersEditV2" %>
+
 
 <asp:Content runat="server" ContentPlaceHolderID="MenuContent">
     <!-- #include file = "~/Views/Shared/MenuTMRP.aspx" -->
@@ -45,6 +47,7 @@
                         </asp:LinkButton>
                     </div><!-- end card header -->
                     <div class="card-body">
+                        <uc1:UsersEditV2 runat="server" id="UsersEditV2" />
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="mb-3">
@@ -70,9 +73,11 @@
                         <div class="pb-4">
                             <div data-simplebar style="max-height: 500px;">
                                 <div class="table-responsive mt-2">
+
                                     <asp:GridView runat="server" ID="gvUser" AutoGenerateColumns="false" CssClass="table table-striped table-bordered gridview" 
                                         OnRowDataBound="gvUser_RowDataBound" ShowHeader="true">
                                         <Columns>
+
                                             <asp:TemplateField HeaderText="ID">
                                                 <HeaderTemplate>
                                                     <asp:CheckBox ID="chkSelectAll" runat="server" OnCheckedChanged="chkSelectAll_CheckedChanged" AutoPostBack="true" />
@@ -81,7 +86,8 @@
                                                     <asp:CheckBox ID="chkSelect" runat="server"  />
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-			                                <%--<asp:BoundField DataField="UserID" HeaderText="UserID" />--%>
+
+
                                             <asp:TemplateField HeaderText="UserID">
                                                 <ItemTemplate>
                                                     <asp:Button runat="server" ID="bEdit" CssClass="btn btn-link btn-sm" Text='<%# Eval("UserID") %>' OnClick="bEdit_Click" />
@@ -97,9 +103,14 @@
                                                     <asp:Label ID="lblName" runat="server" Text='<%# Eval("UserName") %>' />
                                                 </ItemTemplate>
                                             </asp:TemplateField>
+
+
 			                                <asp:BoundField DataField="FullName" HeaderText="FullName" />
+
 			                                <asp:BoundField DataField="Email" HeaderText="Email Address" />
+
 			                                <asp:BoundField DataField="JobTitle" HeaderText="Title" />
+
 		                                </Columns>
                                     </asp:GridView>
                                 </div>

@@ -10,4 +10,9 @@
         End If
     End Sub
 
+    Public Sub RefreshMST()
+        Dim script As String = "location.reload();"
+        ScriptManager.RegisterStartupScript(Me, Me.GetType(), "Refresh", script, True)
+    End Sub
+
 End Class

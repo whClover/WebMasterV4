@@ -1,4 +1,7 @@
-﻿<%@ Page Title="Measurement Inspection" MasterPageFile="~/Site.Master" Language="vb" AutoEventWireup="false" CodeBehind="MeaInspTemplate.aspx.vb" Inherits="WebMasterV4.MeaInspTemplate" %>
+﻿<%@ Page Title="Measure Inspection Template" MasterPageFile="~/Site.Master" Language="vb" AutoEventWireup="false" CodeBehind="MeaInspTemplate.aspx.vb" Inherits="WebMasterV4.MeaInspTemplate" %>
+<%@ Register Src="~/Views/TCRC/Workshop/Inspection/MeaTemplateEdit.ascx" TagPrefix="uc1" TagName="MeaTemplateEdit" %>
+
+
 
 <asp:Content runat="server" ContentPlaceHolderID="MenuContent">
     <!-- #include file = "~/Views/Shared/MenuTCRC.aspx" -->
@@ -6,6 +9,7 @@
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <form id="form1" runat="server">
+
         <!-- start page title -->
         <div class="row">
             <div class="col-12">
@@ -15,7 +19,7 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Workshop Page</a></li>
-                            <li class="breadcrumb-item active">Measurement Inspection</li>
+                            <li class="breadcrumb-item active">Measurement Inspection Template</li>
                         </ol>
                     </div>
                 </div>
@@ -32,28 +36,29 @@
                             <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" ID="bSearch" OnClick="bSearch_Click">
                                 <i class="fa fa-search"></i> Search
                             </asp:LinkButton>
-                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" ID="bAdd" OnClick="bAdd_Click">
+                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" ID="bAdd">
                                 <i class="fa fa-plus"></i> Add
                             </asp:LinkButton>
                         </div>
                     </div><!-- end card header -->
                     <div class="card-body">
+                        <uc1:MeaTemplateEdit runat="server" id="MeaTemplateEdit" />
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="tFullName">Full Name</label>
-                                    <asp:TextBox runat="server" CssClass="form-control" ID="tFullName" placeholder="..." AutoCompleteType="Disabled"></asp:TextBox>
+                                    <label for="tDesc">Description</label>
+                                    <asp:TextBox runat="server" CssClass="form-control" ID="tDesc" AutoCompleteType="Disabled"></asp:TextBox>
                                 </div>                                
                             </div>
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="tUserID">UserID</label>
-                                    <asp:TextBox runat="server" CssClass="form-control" ID="tUserID" placeholder="..." AutoCompleteType="Disabled"></asp:TextBox>
+                                    <label for="tUserID">Component</label>
+                                    <asp:DropDownList runat="server" data-trigger ID="ddComp" CssClass="form-control form-control-sm"></asp:DropDownList>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <label for="ddTitle">Job Title</label>
-                                <asp:ListBox data-trigger id="ddTitle" runat="server" CssClass="form-control form-control-sm" Height="30px" SelectionMode="Multiple"></asp:ListBox>
+                                <label for="ddTitle">Unit Description</label>
+                                <asp:DropDownList runat="server" data-trigger ID="ddUnitDesc" CssClass="form-control form-control-sm"></asp:DropDownList>
                             </div>
                         </div>
                         <asp:Label runat="server" ID="lcount" CssClass="badge badge-soft-primary"></asp:Label>
@@ -61,10 +66,26 @@
                     </div>
                     <div class="card-footer">
                         <div class="pb-4">
+                            <asp:Label runat="server" ID="tes"></asp:Label>
                             <div class="table-responsive">
-                                <asp:GridView runat="server" ID="gv_Insp" AutoGenerateColumns="false">
+                                <asp:GridView runat="server" ID="gvInsp" AutoGenerateColumns="false" CssClass="table table-striped table-bordered gridview">
                                     <Columns>
-
+                                        <asp:TemplateField ItemStyle-CssClass="text-center">
+                                            <ItemTemplate>
+                                                <asp:LinkButton runat="server" ID="bDetailsTemp" CssClass="btn btn-link btn-sm" CommandArgument='<%# Eval("IDGroup") %>' OnClick="bDetailsTemp_Click">
+                                                    Details
+                                                </asp:LinkButton> | 
+                                                <asp:LinkButton runat="server" ID="bEditTemp" CssClass="btn btn-link btn-sm" CommandArgument='<%# Eval("IDGroup") %>' OnClick="bEditTemp_Click">
+                                                    Edit
+                                                </asp:LinkButton>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:BoundField DataField="IDGroup" HeaderText="ID" />
+                                        <asp:BoundField DataField="UnitDesc" HeaderText="Unit Description" />
+                                        <asp:BoundField DataField="ComponentName" HeaderText="Component" />
+                                        <asp:BoundField DataField="TemplateDesc" HeaderText="Description" />
+                                        <asp:BoundField DataField="RegisterBy" HeaderText="Register By" />
+                                        <asp:BoundField DataField="RegisterDate" HeaderText="Register Date" />
                                     </Columns>
                                 </asp:GridView>
                             </div>

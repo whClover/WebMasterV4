@@ -16,7 +16,7 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="~/Views/TCRC/Workshop/Index.aspx" runat="server">
+                        <a class="nav-link" href="~/Views/TCRC/Workshop/IndexWS.aspx" runat="server">
                             <i class="fas fa-place-of-worship"></i>
                             <span>Workshop</span>
                         </a>

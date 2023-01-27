@@ -21,15 +21,16 @@ Public Class BundleConfig
             "~/assets/libs/feather-icons/feather.min.js",
             "~/assets/js/app.js",
             "~/assets/costume/multiselect/chosen.jquery.min.js",
-            "~/assets/costume/js/myjs.js",
             "~/assets/libs/choices.js/public/assets/scripts/choices.min.js",
             "~/assets/libs/flatpickr/flatpickr.min.js",
             "~/assets/js/pages/form-advanced.init.js",
-            "~/assets/costume/js/marquee.js"
+            "~/assets/costume/js/marquee.js",
+            "~/assets/costume/js/myjs.js"
         ))
 
-        bundles.Add(New ScriptBundle("~/jquery").Include(
-            "~/assets/costume/js/jquery-3.6.3.min.js"
+        bundles.Add(New ScriptBundle("~/buatmodal").Include(
+            "~/assets/costume/js/jquery-3.6.3.min.js",
+            "~/assets/costume/js/bootstrap4.5.0.js"
         ))
     End Sub
 End Class

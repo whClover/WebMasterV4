@@ -52,7 +52,7 @@ Public Class Users
         End If
     End Sub
 
-    Private Sub GenerateData()
+    Public Sub GenerateData()
         Try
             filtering()
             Dim dt As New DataTable
@@ -122,15 +122,27 @@ Public Class Users
     End Sub
 
     Protected Sub bAdd_Click(sender As Object, e As EventArgs)
-        'Dim sample As String = "$('#sampleModal1').modal('show');"
-        'Page.ClientScript.RegisterStartupScript(Me.GetType(), "script", sample)
-
-        Utility.ModalV1("UsersEdit.aspx")
+        utility.ModalV2("MainContent_UsersEditV2_Panel1")
     End Sub
 
     Protected Sub bEdit_Click(sender As Object, e As EventArgs)
         Dim button As Button = CType(sender, Button)
         Dim eid As String = button.Text
-        utility.ModalV1("UsersEdit.aspx", "id=" & eid)
+
+        Dim dt As New DataTable
+        dt = GetDataTable("select UserID,Username,FullName,Email,JobTitle from tbl_user where UserID=" & evar(eid, 1))
+        Dim eUserID As HiddenField = DirectCast(UsersEditV2.FindControl("userid"), HiddenField)
+        Dim eUsername As TextBox = DirectCast(UsersEditV2.FindControl("tUsername"), TextBox)
+        Dim eFullName As TextBox = DirectCast(UsersEditV2.FindControl("tFullname"), TextBox)
+        Dim eEmail As TextBox = DirectCast(UsersEditV2.FindControl("tEmailAddress"), TextBox)
+        Dim eJobTitle As TextBox = DirectCast(UsersEditV2.FindControl("tJobTitle"), TextBox)
+
+        eUserID.Value = eid
+        eUsername.Text = CheckDBNull(dt.Rows(0)(1))
+        eFullName.Text = CheckDBNull(dt.Rows(0)(2))
+        eEmail.Text = CheckDBNull(dt.Rows(0)(3))
+        eJobTitle.Text = CheckDBNull(dt.Rows(0)(4))
+
+        utility.ModalV2("MainContent_UsersEditV2_Panel1")
     End Sub
 End Class

@@ -1511,12 +1511,19 @@
     <Content Include="Views\Sample\Users.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="Views\Sample\UsersEdit.aspx" />
+    <Content Include="Views\Sample\UsersEditV2.ascx" />
+    <Content Include="Views\Sample\WebForm1.aspx" />
+    <Content Include="Views\Shared\ErrorPage.aspx" />
     <Content Include="Views\Shared\MenuTCRC.aspx" />
     <Content Include="Views\Shared\MenuTMRP.aspx" />
     <Content Include="Views\TCRC\index.aspx" />
     <Content Include="Views\TCRC\Office\index.aspx" />
-    <Content Include="Views\TCRC\Workshop\index.aspx" />
+    <Content Include="Views\TCRC\Workshop\indexWS.aspx" />
     <Content Include="Views\TCRC\Workshop\Inspection\MeaInspTemplate.aspx" />
+    <Content Include="Views\TCRC\Workshop\Inspection\MeaInspTemplateAddEdit.aspx" />
+    <Content Include="Views\TCRC\Workshop\Inspection\MeaInspTemplateSec.aspx" />
+    <Content Include="Views\TCRC\Workshop\Inspection\MeaInspTemplateUpload.aspx" />
+    <Content Include="Views\TCRC\Workshop\Inspection\MeaTemplateEdit.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1582,6 +1589,27 @@
       <DependentUpon>UsersEdit.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Views\Sample\UsersEditV2.ascx.designer.vb">
+      <DependentUpon>UsersEditV2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sample\UsersEditV2.ascx.vb">
+      <DependentUpon>UsersEditV2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Sample\WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sample\WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\ErrorPage.aspx.designer.vb">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\ErrorPage.aspx.vb">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Views\Shared\MenuTCRC.aspx.designer.vb">
       <DependentUpon>MenuTCRC.aspx</DependentUpon>
     </Compile>
@@ -1610,11 +1638,11 @@
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Views\TCRC\Workshop\index.aspx.designer.vb">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Views\TCRC\Workshop\indexWS.aspx.designer.vb">
+      <DependentUpon>indexWS.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\TCRC\Workshop\index.aspx.vb">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Views\TCRC\Workshop\indexWS.aspx.vb">
+      <DependentUpon>indexWS.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Views\TCRC\Workshop\Inspection\MeaInspTemplate.aspx.designer.vb">
@@ -1622,7 +1650,35 @@
     </Compile>
     <Compile Include="Views\TCRC\Workshop\Inspection\MeaInspTemplate.aspx.vb">
       <DependentUpon>MeaInspTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\MeaInspTemplateAddEdit.aspx.designer.vb">
+      <DependentUpon>MeaInspTemplateAddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\MeaInspTemplateAddEdit.aspx.vb">
+      <DependentUpon>MeaInspTemplateAddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\MeaInspTemplateSec.aspx.designer.vb">
+      <DependentUpon>MeaInspTemplateSec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\MeaInspTemplateSec.aspx.vb">
+      <DependentUpon>MeaInspTemplateSec.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\MeaInspTemplateUpload.aspx.designer.vb">
+      <DependentUpon>MeaInspTemplateUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\MeaInspTemplateUpload.aspx.vb">
+      <DependentUpon>MeaInspTemplateUpload.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\MeaTemplateEdit.ascx.designer.vb">
+      <DependentUpon>MeaTemplateEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TCRC\Workshop\Inspection\MeaTemplateEdit.ascx.vb">
+      <DependentUpon>MeaTemplateEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -1725,6 +1781,8 @@
     <Content Include="assets\libs\wnumb\LICENSE.MD" />
     <Content Include=".htaccess" />
     <Content Include="assets\costume\js\jquery-3.6.3.min.js" />
+    <Content Include="Files\Digital Inspection Template.xlsx" />
+    <Content Include="assets\costume\js\bootstrap4.5.0.js" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

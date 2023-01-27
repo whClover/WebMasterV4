@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class MeaInspTemplate
+Partial Public Class MeaInspTemplateSec
 
     '''<summary>
     '''form1 control.
@@ -23,31 +23,31 @@ Partial Public Class MeaInspTemplate
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''bSearch control.
+    '''tID control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents bSearch As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents tID As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''bAdd control.
+    '''tUnitDesc control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents bAdd As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents tUnitDesc As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''MeaTemplateEdit control.
+    '''tComp control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents MeaTemplateEdit As Global.WebMasterV4.MeaTemplateEdit
+    Protected WithEvents tComp As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''tDesc control.
@@ -59,56 +59,65 @@ Partial Public Class MeaInspTemplate
     Protected WithEvents tDesc As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''ddComp control.
+    '''tRegBy control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ddComp As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents tRegBy As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''ddUnitDesc control.
+    '''tRegDate control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ddUnitDesc As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents tRegDate As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''lcount control.
+    '''bAdd control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lcount As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents bAdd As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''lerror control.
+    '''bUpload control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lerror As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents bUpload As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''tes control.
+    '''LinkButton2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents tes As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents LinkButton2 As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''gvInsp control.
+    '''LinkButton1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents gvInsp As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents LinkButton1 As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''gvSection control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents gvSection As Global.System.Web.UI.WebControls.GridView
 End Class
