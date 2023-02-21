@@ -41,21 +41,21 @@
                                                         <asp:TextBox runat="server" CssClass="form-control" ReadOnly="true" Text="TCRC" ID="webapp"></asp:TextBox>
                                                         <label for="input-username">Web Application</label>
                                                         <div class="form-floating-icon">
-                                                            <i class="uil uil-apps"></i>
+                                                            <i class="fa fa-globe"></i>
                                                         </div>
                                                     </div>
                                                     <div class="form-floating form-floating-custom mb-3">
                                                         <asp:TextBox runat="server" CssClass="form-control" placeholder="Enter Username/JDE" ID="tjdeuser" AutoCompleteType="Disabled"></asp:TextBox>
                                                         <label for="input-username">Username / JDE Numbers</label>
                                                         <div class="form-floating-icon">
-                                                            <i class="uil uil-users-alt"></i>
+                                                            <i class="fa fa-user"></i>
                                                         </div>
                                                     </div>
                                                     <div class="form-floating form-floating-custom mb-3">
                                                         <asp:TextBox runat="server" CssClass="form-control" TextMode="Password" placeholder="Enter Password" ID="tpass"></asp:TextBox>
                                                         <label for="input-password">Password</label>
                                                         <div class="form-floating-icon">
-                                                            <i class="uil uil-padlock"></i>
+                                                            <i class="fa fa-lock"></i>
                                                         </div>
                                                     </div>
                                                     <div class="alert alert-danger" role="alert" id="eNotif" runat="server" style="display:none;">
@@ -92,5 +92,14 @@
     <asp:PlaceHolder runat="server">
         <%= Scripts.Render("~/Scripts") %>
     </asp:PlaceHolder>
+
+    <script type="text/javascript">
+        document.onkeypress = function (event) {
+            event = (event || window.event);
+            if (event.keyCode == 13) {
+                document.getElementById("<%= bLogin.ClientID %>").click();
+            }
+        }
+    </script>
 </body>
 </html>

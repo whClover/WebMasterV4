@@ -14,13 +14,31 @@ Option Explicit On
 Partial Public Class MeaInspTemplateSec
 
     '''<summary>
-    '''form1 control.
+    '''MenuTCRC control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents MenuTCRC As Global.WebMasterV4.MenuTCRC1
+
+    '''<summary>
+    '''MeaTemplateSecEdit control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents MeaTemplateSecEdit As Global.WebMasterV4.MeaTemplateSecEdit
+
+    '''<summary>
+    '''MeaTemplateSecUpload control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents MeaTemplateSecUpload As Global.WebMasterV4.MeaTemplateSecUpload
 
     '''<summary>
     '''tID control.
@@ -95,22 +113,22 @@ Partial Public Class MeaInspTemplateSec
     Protected WithEvents bUpload As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''LinkButton2 control.
+    '''bShowSample control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents LinkButton2 As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents bShowSample As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''LinkButton1 control.
+    '''bBack control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents LinkButton1 As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents bBack As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
     '''gvSection control.

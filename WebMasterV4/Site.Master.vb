@@ -8,6 +8,10 @@
             sFullName.InnerText = fullname
             sEmail.InnerText = email
         End If
+
+        If Session("startTime") Is Nothing Then
+            Session("startTime") = DateTime.Now
+        End If
     End Sub
 
     Public Sub RefreshMST()

@@ -190,9 +190,20 @@ Public Class Utility
     End Function
 
     Public Shared Function eByName() As String
+        Dim isDebug As String = "1"
+
         If IsSessionExist("ss_userid") Then
-            eByName = HttpContext.Current.Session("ss_username").ToString
+            eByName = evar(HttpContext.Current.Session("ss_username").ToString, 1)
             Return eByName
+        Else
+            Select Case isDebug
+                Case "1"
+                    eByName = evar("sys", 1)
+                    Return eByName
+                Case Else
+                    HttpContext.Current.Response.Redirect(GlobalString.urlTCRCLogin)
+                    Return 0
+            End Select
         End If
     End Function
 
@@ -213,5 +224,50 @@ Public Class Utility
         Dim st As New System.Diagnostics.StackTrace()
         Dim sf As System.Diagnostics.StackFrame = st.GetFrame(1)
         Return sf.GetMethod().Name
+    End Function
+
+    Public Shared Function CheckGroup(ByVal EmailTypeID As String) As Boolean
+        CheckGroup = False
+
+        Dim query, username As String
+
+        If IsSessionExist("ss_username") = False Then
+            HttpContext.Current.Response.Redirect(GlobalString.urlTCRCLogin)
+            Return 0
+        Else
+            username = evar(HttpContext.Current.Session("ss_username").ToString, 1)
+        End If
+
+        query = "select ID,EmailTypeDesc from vw_UserPrivilegesEmailNotif where username=" & username & " and EmailTypeID=" & evar(EmailTypeID, 1) & ""
+        Dim dt As New DataTable
+        dt = GetDataTable(query)
+        If dt.Rows.Count > 0 Then
+            CheckGroup = True
+        Else
+            CheckGroup = False
+        End If
+    End Function
+
+    Public Shared Function templateNotif(ByVal caseID As Integer, ByVal val1 As String) As String
+        templateNotif = ""
+        Dim query As String = ""
+
+        Select Case caseID
+            'Check Email Group - Refer CheckGroup Function
+            Case 1
+                query = "select Description from tbl_EmailType where EmailTypeID=" & evar(val1, 1)
+                Dim dt As New DataTable
+                dt = GetDataTable(query)
+                templateNotif = "You dont have access " & dt.Rows(0)(0)
+            Case Else
+                templateNotif = ""
+        End Select
+    End Function
+
+    Public Function showAlert(ByVal msg As String)
+        _page.ClientScript.RegisterStartupScript(_page.GetType, "closeTab", "alertify
+        .alert(""" & msg & """, function(){});", True)
+
+        Return 0
     End Function
 End Class

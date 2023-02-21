@@ -14,92 +14,11 @@ Option Explicit On
 Partial Public Class index
 
     '''<summary>
-    '''form1 control.
+    '''MenuTCRC control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
-    '''<summary>
-    '''bRefresh control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents bRefresh As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''rpt_TD control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents rpt_TD As Global.System.Web.UI.WebControls.Repeater
-
-    '''<summary>
-    '''rpt_wash control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents rpt_wash As Global.System.Web.UI.WebControls.Repeater
-
-    '''<summary>
-    '''Repeater1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Repeater1 As Global.System.Web.UI.WebControls.Repeater
-
-    '''<summary>
-    '''Repeater2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Repeater2 As Global.System.Web.UI.WebControls.Repeater
-
-    '''<summary>
-    '''Repeater3 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Repeater3 As Global.System.Web.UI.WebControls.Repeater
-
-    '''<summary>
-    '''Repeater4 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Repeater4 As Global.System.Web.UI.WebControls.Repeater
-
-    '''<summary>
-    '''Repeater5 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Repeater5 As Global.System.Web.UI.WebControls.Repeater
-
-    '''<summary>
-    '''Repeater6 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Repeater6 As Global.System.Web.UI.WebControls.Repeater
+    Protected WithEvents MenuTCRC As Global.WebMasterV4.MenuTCRC1
 End Class

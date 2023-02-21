@@ -31,8 +31,7 @@ Public Class MeaInspTemplate
                 tempfilter = " where  " & Right(tempfilter, Len(tempfilter) - 4)
             End If
         Catch ex As Exception
-            Dim currentPage As String = Page.AppRelativeVirtualPath
-            utility.ModalV1Error(currentPage, "filtering", ex.Message)
+            err_handler(GetCurrentPageName(), GetCurrentMethodName, ex.Message)
         End Try
     End Sub
 
@@ -44,8 +43,7 @@ Public Class MeaInspTemplate
             Me.gvInsp.DataSource = dt
             Me.gvInsp.DataBind()
         Catch ex As Exception
-            Dim currentPage As String = Page.AppRelativeVirtualPath
-            utility.ModalV1Error(currentPage, "BindingData", ex.Message)
+            err_handler(GetCurrentPageName(), GetCurrentMethodName, ex.Message)
         End Try
     End Sub
 
@@ -56,25 +54,6 @@ Public Class MeaInspTemplate
 
     Protected Sub bSearch_Click(sender As Object, e As EventArgs)
         BindingData()
-    End Sub
-
-    Protected Sub bDetails_Click(sender As Object, ByVal e As CommandEventArgs)
-        Dim eid As String = e.CommandArgument
-        Response.Redirect(urlMeasureTemplateSec & "?id=" & eid)
-    End Sub
-
-    Protected Sub bEdit_Click(sender As Object, ByVal e As CommandEventArgs)
-        Dim eid As String = e.CommandArgument
-
-        'old method
-        'utility.ModalV1("MeaTemplateAddEdit.aspx" & "?id=" & eid)
-
-
-        'Dim ddUnitDesc As DropDownList = DirectCast(MeaTemplateEdit.FindControl("ddUnitDesc"), DropDownList)
-        'ddUnitDesc.SelectedValue = ""
-
-
-
     End Sub
 
     Protected Sub bDetailsTemp_Click(sender As Object, e As EventArgs)
@@ -97,6 +76,20 @@ Public Class MeaInspTemplate
         eComponent.SelectedValue = dt.Rows(0)(2)
         eDesc.Text = dt.Rows(0)(3)
 
-        ClientScript.RegisterStartupScript(Me.GetType(), "showmodal", "$('#MainContent_MeaTemplateEdit_Panel1').modal('show');", True)
+        utility.ModalV2("MainContent_MeaTemplateEdit_Panel1")
+    End Sub
+
+    Protected Sub bAdd_Click(sender As Object, e As EventArgs)
+        Dim eIDGroup As HiddenField = DirectCast(MeaTemplateEdit.FindControl("IDGroup"), HiddenField)
+        Dim eUnitDesc As DropDownList = DirectCast(MeaTemplateEdit.FindControl("ddUnitDesc"), DropDownList)
+        Dim eComponent As DropDownList = DirectCast(MeaTemplateEdit.FindControl("ddComp"), DropDownList)
+        Dim eDesc As TextBox = DirectCast(MeaTemplateEdit.FindControl("tDesc"), TextBox)
+
+        eIDGroup.Value = "0"
+        eUnitDesc.SelectedValue = ""
+        eComponent.SelectedValue = ""
+        eDesc.Text = String.Empty
+
+        utility.ModalV2("MainContent_MeaTemplateEdit_Panel1")
     End Sub
 End Class

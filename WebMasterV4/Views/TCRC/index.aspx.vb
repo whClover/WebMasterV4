@@ -141,7 +141,7 @@ Public Class index
 
 #Region "Teardown"
     Sub load_TD()
-        LoadDataToRepeater(rpt_TD, "Assembly")
+        'LoadDataToRepeater(rpt_TD, "Assembly")
     End Sub
 
     Protected Sub rpt_TD_ItemDataBound(sender As Object, e As RepeaterItemEventArgs)

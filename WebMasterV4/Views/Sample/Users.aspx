@@ -8,7 +8,6 @@
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <form id="form1" runat="server">
         <!-- start page title -->
         <div class="row">
             <div class="col-12">
@@ -122,5 +121,4 @@
                 <!-- end card -->
             </div>
         </div>
-    </form>
 </asp:Content>

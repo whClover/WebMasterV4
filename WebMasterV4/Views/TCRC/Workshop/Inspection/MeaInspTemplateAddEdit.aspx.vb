@@ -23,18 +23,42 @@ Public Class MeaInspTemplateAddEdit
 
     Protected Sub bSave_Click(sender As Object, e As EventArgs)
         Dim eid As String = Request.QueryString("id")
-        Dim eseq As String = evar(tSeq.Text, 1)
-        Dim esec As String = evar(tSectionName.Text, 1)
+        Dim esec, eseq As String
+
+        If tSeq.Text = String.Empty Then
+            showAlertv2("warning", "Please Fill Sequence")
+            Exit Sub
+        Else
+            eseq = evar(tSeq.Text, 1)
+        End If
+
+        If tSectionName.Text = String.Empty Then
+            showAlertv2("warning", "Please Fill Section Name")
+            Exit Sub
+        Else
+            esec = evar(tSectionName.Text, 1)
+        End If
+
         Dim ecurSec As String = Request.QueryString("sec")
 
-        Dim tempstring As String = "exec dbo.TCRCMeaInspSectionSubmit " & eid _
+        Try
+            Dim tempstring As String = "exec dbo.TCRCMeaInspSectionSubmit " & eid _
             & "," & evar(eseq, 1) & "," & evar(esec, 1) & "," & evar(ecurSec, 1) _
             & eByName()
-        executeQuery(tempstring)
+            executeQuery(tempstring)
+        Catch ex As Exception
+            err_handler(GetCurrentPageName(), GetCurrentMethodName, ex.Message)
+        End Try
     End Sub
 
     Protected Sub bClose_Click(sender As Object, e As EventArgs)
         Dim utility As New Utility(Me)
         utility.closeMe()
+    End Sub
+
+    Sub showAlertv2(ByVal type As String, ByVal msg As String)
+        Dim script As String
+        script = "toastr[""" & type & """](""" & msg & """);"
+        ScriptManager.RegisterStartupScript(Me, Me.GetType(), "toastrMessage", script, True)
     End Sub
 End Class

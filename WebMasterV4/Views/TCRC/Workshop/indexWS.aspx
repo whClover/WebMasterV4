@@ -1,11 +1,13 @@
 ﻿<%@ Page Title="Workshop Page" MasterPageFile="~/Site.Master" Language="vb" AutoEventWireup="false" CodeBehind="indexWS.aspx.vb" Inherits="WebMasterV4.indexWS" %>
 
+<%@ Register Src="~/Views/Shared/MenuTCRC.ascx" TagPrefix="uc1" TagName="MenuTCRC" %>
+
+
 <asp:Content runat="server" ContentPlaceHolderID="MenuContent">
-    <!-- #include file = "~/Views/Shared/MenuTCRC.aspx" -->
+    <uc1:MenuTCRC runat="server" ID="MenuTCRC" />
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <form id="form1" runat="server">
         <!-- start page title -->
         <div class="row">
             <div class="col-12">
@@ -46,7 +48,7 @@
                         <div class="mb-4">
                             <ul class="list-unstyled categories-list">
                                 <li>
-                                    <a href="javascript: void(0);" class="text-body bg-light d-flex align-items-center">
+                                    <a href="~/Views/TCRC/Workshop/Inspection/MeaInspWorksheet.aspx" runat="server" class="text-body bg-light d-flex align-items-center">
                                         <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Measurement Inspection Worksheet</span> 
                                     </a>
                                 </li>                                
@@ -180,5 +182,4 @@
                 </div><!-- end card -->
             </div><!-- end col -->
         </div><!-- end row -->
-    </form>
 </asp:Content>

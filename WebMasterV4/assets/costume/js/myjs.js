@@ -1,3 +1,3 @@
-﻿function ShowModal() {
-    $("#myModal").modal("show");
-}
+﻿$(document).ready(function () {
+    $('#summernote').summernote();
+});

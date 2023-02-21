@@ -28,7 +28,7 @@ Public Class LoginPage
         Dim eusername As String = evar(tjdeuser.Text, 1)
         Dim ePass As String = evar(tpass.Text, 1)
 
-        Dim query As String = "select userid, dbo.decryptpass(pass) as dbpass, Username, FullName, Previllege, ActiveStatus, email from tbl_user where userid=" + eusername
+        Dim query As String = "select userid, dbo.decryptpass(pass) as dbpass, Username, FullName, Previllege, ActiveStatus, email from tbl_user where userid=" + eusername + " or Username=" + eusername
         Dim dt As New DataTable
         dt = GetDataTable(query)
 

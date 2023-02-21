@@ -39,16 +39,22 @@ Public Class SQLFunction
     End Function
 
     Public Shared Function executeQuery(ByVal Query As String) As String
-        Dim cn As New SqlConnection(connString)
-        cn.Open()
-        Dim cm As New SqlCommand(Query, cn)
-        Dim rd As SqlDataReader = cm.ExecuteReader
-        rd.Read()
+        Try
+            Dim cn As New SqlConnection(connString)
+            cn.Open()
+            Dim cm As New SqlCommand(Query, cn)
+            Dim rd As SqlDataReader = cm.ExecuteReader
+            rd.Read()
 
-        cm.Connection.Close()
-        cm.Connection.Dispose()
-        rd.Close()
-        cn.Close()
+            cm.Connection.Close()
+            cm.Connection.Dispose()
+            rd.Close()
+            cn.Close()
+
+
+        Catch ex As Exception
+            err_handler(clsname & "-" & GetCurrentPageName(), GetCurrentMethodName, ex.Message)
+        End Try
 
         Return "0"
     End Function

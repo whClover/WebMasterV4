@@ -1,11 +1,17 @@
 ﻿<%@ Page Title="Measure Inspection Template Section" MasterPageFile="~/Site.Master" Language="vb" AutoEventWireup="false" CodeBehind="MeaInspTemplateSec.aspx.vb" Inherits="WebMasterV4.MeaInspTemplateSec" %>
 
+<%@ Register Src="~/Views/TCRC/Workshop/Inspection/MeaTemplateSecEdit.ascx" TagPrefix="uc1" TagName="MeaTemplateSecEdit" %>
+<%@ Register Src="~/Views/TCRC/Workshop/Inspection/MeaTemplateSecUpload.ascx" TagPrefix="uc1" TagName="MeaTemplateSecUpload" %>
+<%@ Register Src="~/Views/Shared/MenuTCRC.ascx" TagPrefix="uc1" TagName="MenuTCRC" %>
+
+
+
 <asp:Content runat="server" ContentPlaceHolderID="MenuContent">
-    <!-- #include file = "~/Views/Shared/MenuTCRC.aspx" -->
+    <uc1:MenuTCRC runat="server" ID="MenuTCRC" />
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <form id="form1" runat="server">
+
         <!-- start page title -->
         <div class="row">
             <div class="col-12">
@@ -28,20 +34,8 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <ul class="nav nav-tabs nav-tabs-custom nav-justified mb-3" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-bs-toggle="tab" href="#home2" role="tab">
-                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                                    <span class="d-none d-sm-block">Section List</span> 
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#profile2" role="tab">
-                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                    <span class="d-none d-sm-block">Details Section</span> 
-                                </a>
-                            </li>
-                        </ul>
+                        <uc1:MeaTemplateSecEdit runat="server" ID="MeaTemplateSecEdit" />
+                        <uc1:MeaTemplateSecUpload runat="server" ID="MeaTemplateSecUpload" />
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3 row">
@@ -93,25 +87,29 @@
                             <asp:LinkButton runat="server" CssClass="btn btn-soft-primary mb-3" ID="bUpload" OnClick="bUpload_Click">
                                 <i class="fa fa-upload"></i> Upload Template
                             </asp:LinkButton>
-                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary mb-3" ID="LinkButton2">
+                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary mb-3" ID="bShowSample" OnClick="bShowSample_Click">
                                 <i class="fas fa-file-pdf"></i> Show Sample
                             </asp:LinkButton>
-                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary mb-3" ID="LinkButton1">
+                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary mb-3" ID="bBack" OnClick="bBack_Click">
                                 <i class="fas fa-arrow-alt-circle-left"></i> Back
                             </asp:LinkButton>
                         </div>
                         <div class="table-responsive">
-                            <asp:GridView runat="server" OnRowCommand="gvSection_RowCommand" ID="gvSection" AutoGenerateColumns="false" CssClass="table table-striped table-bordered gridview">
+                            <asp:GridView runat="server" ID="gvSection" AutoGenerateColumns="false" CssClass="table table-striped table-bordered gridview">
                                 <Columns>
-                                    <asp:TemplateField ItemStyle-CssClass="text-center">
+                                    <asp:TemplateField ItemStyle-CssClass="text-center" ItemStyle-Width="20%">
                                         <ItemTemplate>
-                                            <asp:Button runat="server" ID="bDetails" CssClass="btn btn-link btn-sm" Text="Details" /> |
+                                            <asp:Button runat="server" ID="bDetails" CssClass="btn btn-link btn-sm" Text="Details" 
+                                                sec='<%# Eval("SectionName") %>' OnClick="bDetails_Click" /> |
                                             <asp:Button runat="server" ID="bEdit" CssClass="btn btn-link btn-sm" Text="Edit" 
-                                                OnClick="bEdit_Click" seq='<%# Eval("SeqSection") %>' sec='<%# Eval("SectionName") %>' />
+                                                OnClick="bEdit_Click" seq='<%# Eval("SeqSection") %>' sec='<%# Eval("SectionName") %>' aftinsp='<%# Eval("AfterInspection") %>' /> |
+                                            <asp:Button runat="server" ID="bDelete" CssClass="btn btn-link btn-sm" Text="Delete" OnClientClick="return confirm('Are you sure?');"
+                                                Onclick="bDelete_Click" seq='<%# Eval("SeqSection") %>' sec='<%# Eval("SectionName") %>' />
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:BoundField DataField="SeqText" HeaderText="Sequence" HeaderStyle-CssClass="text-center" ItemStyle-CssClass="text-center" />
+                                    <asp:BoundField ItemStyle-Width="10%" DataField="SeqText" HeaderText="Sequence" HeaderStyle-CssClass="text-center" ItemStyle-CssClass="text-center" />
                                     <asp:BoundField DataField="SectionName" HeaderText="Section Name" />
+                                    <asp:BoundField DataField="AfterInspection" HeaderText="After Inspection" />
                                 </Columns>
                             </asp:GridView>
                         </div>
@@ -119,5 +117,5 @@
                 </div>
             </div>
         </div>
-    </form>
+
 </asp:Content>
