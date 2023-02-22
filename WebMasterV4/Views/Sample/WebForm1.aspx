@@ -25,7 +25,7 @@
             <div class="modal-dialog">
                 <!-- Modal body -->
                 <div class="modal-body">
-                    oke oke oke
+                    oke oke oke oke
                 </div>
             </div>
         </div>
