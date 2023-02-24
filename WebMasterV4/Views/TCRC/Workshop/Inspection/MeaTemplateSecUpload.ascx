@@ -33,8 +33,8 @@
             <div class="card-footer">
                 <asp:Label runat="server" ID="lerror" CssClass="badge badge-soft-warning" style="text-align:left !important"></asp:Label>
                 <div class="d-flex flex-wrap gap-2">
-                    <asp:Button runat="server" CssClass="btn btn-soft-primary" ID="bUpload" OnClick="bUpload_Click" Text="Upload" />
-                    <asp:Button runat="server" CssClass="btn btn-soft-primary" ID="bClose" data-dismiss="modal" Text="Close" />
+                    <asp:Button runat="server" CssClass="btn btn-soft-purple" ID="bUpload" OnClick="bUpload_Click" Text="Upload" />
+                    <asp:Button runat="server" CssClass="btn btn-soft-purple" ID="bClose" data-dismiss="modal" Text="Close" />
                 </div>
             </div>
         </div>

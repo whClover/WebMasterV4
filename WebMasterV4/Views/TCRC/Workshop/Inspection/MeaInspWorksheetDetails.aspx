@@ -45,7 +45,7 @@
                                 <li class="px-4 py-3 pt-0">
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0 me-3">
-                                            <asp:LinkButton CssClass="btn btn-soft-primary" runat="server" ID="bShow" OnClick="bShow_Click" CommandArgument='<%# Eval("SectionName") %>'>
+                                            <asp:LinkButton CssClass="btn btn-soft-purple" runat="server" ID="bShow" OnClick="bShow_Click" CommandArgument='<%# Eval("SectionName") %>'>
                                                 <i class="fas fa-eye"></i>
                                             </asp:LinkButton>
                                         </div>
@@ -71,8 +71,8 @@
     <div class="row">
         <div class="col-md-12">
             <div class="d-flex flex-wrap gap-2 mb-3">
-                <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" ID="bMeaPrint" OnClick="bMeaPrint_Click">Print Worksheet</asp:LinkButton>
-                <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" ID="bBack" OnClick="bBack_Click">Back</asp:LinkButton>
+                <asp:LinkButton runat="server" CssClass="btn btn-soft-purple" ID="bMeaPrint" OnClick="bMeaPrint_Click">Print Worksheet</asp:LinkButton>
+                <asp:LinkButton runat="server" CssClass="btn btn-soft-purple" ID="bBack" OnClick="bBack_Click">Back</asp:LinkButton>
             </div>
         </div>
     </div>
@@ -102,7 +102,7 @@
                     <asp:TextBox runat="server" ID="tRemark" CssClass="form-control form-control-sm mb-2" Height="100"></asp:TextBox>
                     <div class="text-center">
                         <%--<asp:LinkButton runat="server" CssClass="btn btn-soft-primary" ID="bSaveRemark" OnClick="bSaveRemark_Click">Save Remark</asp:LinkButton>--%>
-                        <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" ID="rmksave" OnClick="rmksave_Click">Save Remark</asp:LinkButton>
+                        <asp:LinkButton runat="server" CssClass="btn btn-soft-purple" ID="rmksave" OnClick="rmksave_Click">Save Remark</asp:LinkButton>
                     </div>
                 </div>
             </div>

@@ -11,8 +11,8 @@
                 <asp:FileUpload ID="mod_upload" runat="server" />
             </div>
             <div class="modal-footer">
-                <asp:Button runat="server" CssClass="btn btn-primary" Text="Upload" ID="bUpload" OnClick="bUpload_Click" />
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <asp:Button runat="server" CssClass="btn btn-soft-purple" Text="Upload" ID="bUpload" OnClick="bUpload_Click" />
+                <button type="button" class="btn btn-soft-purple" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

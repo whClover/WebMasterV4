@@ -31,7 +31,7 @@
                         <div>
                             <div class="float-end ms-2">
                                 <div class="mb-2">
-                                    <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" Enabled="false">
+                                    <asp:LinkButton runat="server" CssClass="btn btn-soft-purple" Enabled="false">
                                         <i class="fas fa-exclamation-circle"></i>
                                     </asp:LinkButton>
                                 </div>
@@ -49,22 +49,22 @@
                             <ul class="list-unstyled categories-list">
                                 <li>
                                     <a href="~/Views/TCRC/Workshop/Inspection/MeaInspWorksheet.aspx" runat="server" class="text-body bg-light d-flex align-items-center">
-                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Measurement Inspection Worksheet</span> 
+                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-purple"></i> <span class="me-auto">Measurement Inspection Worksheet</span> 
                                     </a>
                                 </li>                                
                                 <li>
                                     <a href="~/Views/TCRC/Workshop/Inspection/MeaInspTemplate.aspx" runat="server" class="text-body bg-light d-flex align-items-center">
-                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Measurement Inspection Template</span> 
+                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-purple"></i> <span class="me-auto">Measurement Inspection Template</span> 
                                     </a>
                                 </li>
                                 <li>
                                     <a href="javascript: void(0);" class="text-body bg-light d-flex align-items-center">
-                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Preliminary Inspection Worksheet</span>
+                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-purple"></i> <span class="me-auto">Preliminary Inspection Worksheet</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="javascript: void(0);" class="text-body bg-light d-flex align-items-center">
-                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Preliminary Inspection Template</span>
+                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-purple"></i> <span class="me-auto">Preliminary Inspection Template</span>
                                     </a>
                                 </li>
                             </ul>
@@ -79,7 +79,7 @@
                         <div>
                             <div class="float-end ms-2">
                                 <div class="mb-2">
-                                    <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" Enabled="false">
+                                    <asp:LinkButton runat="server" CssClass="btn btn-soft-purple" Enabled="false">
                                         <i class="fas fa-exclamation-circle"></i>
                                     </asp:LinkButton>
                                 </div>
@@ -97,12 +97,12 @@
                             <ul class="list-unstyled categories-list">
                                 <li>
                                     <a href="javascript: void(0);" class="text-body bg-light d-flex align-items-center">
-                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Assembly Worksheet</span> 
+                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-purple"></i> <span class="me-auto">Assembly Worksheet</span> 
                                     </a>
                                 </li>
                                 <li>
                                     <a href="javascript: void(0);" class="text-body bg-light d-flex align-items-center">
-                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Assembly Template</span>
+                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-purple"></i> <span class="me-auto">Assembly Template</span>
                                     </a>
                                 </li>
                             </ul>
@@ -117,7 +117,7 @@
                         <div>
                             <div class="float-end ms-2">
                                 <div class="mb-2">
-                                    <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" Enabled="false">
+                                    <asp:LinkButton runat="server" CssClass="btn btn-soft-purple" Enabled="false">
                                         <i class="fas fa-exclamation-circle"></i>
                                     </asp:LinkButton>
                                 </div>
@@ -135,12 +135,12 @@
                             <ul class="list-unstyled categories-list">
                                 <li>
                                     <a href="javascript: void(0);" class="text-body bg-light d-flex align-items-center">
-                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Work Order Activity</span> 
+                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-purple"></i> <span class="me-auto">Work Order Activity</span> 
                                     </a>
                                 </li>
                                 <li>
                                     <a href="javascript: void(0);" class="text-body bg-light d-flex align-items-center">
-                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-primary"></i> <span class="me-auto">Timesheet Mechanic</span>
+                                        <i class="fas fa-angle-double-right font-size-13 me-2 text-purple"></i> <span class="me-auto">Timesheet Mechanic</span>
                                     </a>
                                 </li>
                             </ul>

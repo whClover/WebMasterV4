@@ -24,8 +24,8 @@
             </div>
             <div class="card-footer">
                 <div class="d-flex flex-wrap gap-2">
-                    <asp:Button runat="server" CssClass="btn btn-soft-primary" ID="bSave" OnClick="bSave_Click" text="Save"/>
-                    <asp:Button runat="server" CssClass="btn btn-soft-primary" ID="bClose" OnClick="bClose_Click" Text ="Close" />
+                    <asp:Button runat="server" CssClass="btn btn-soft-purple" ID="bSave" OnClick="bSave_Click" text="Save"/>
+                    <asp:Button runat="server" CssClass="btn btn-soft-purple" ID="bClose" OnClick="bClose_Click" Text ="Close" />
                 </div>
             </div>
         </div>

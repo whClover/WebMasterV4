@@ -30,10 +30,10 @@
                 <div class="card-header justify-content-between d-flex align-items-center">
                     <%--<h4 class="card-title">User Table</h4>--%>
                     <div class="btn-group mt-4 mt-md-0" role="group" aria-label="Basic example">
-                        <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" ID="bSearch" OnClick="bSearch_Click">
+                        <asp:LinkButton runat="server" CssClass="btn btn-soft-purple" ID="bSearch" OnClick="bSearch_Click">
                             <i class="fa fa-search"></i> Search
                         </asp:LinkButton>
-                        <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" ID="bAdd" OnClick="bAdd_Click">
+                        <asp:LinkButton runat="server" CssClass="btn btn-soft-purple" ID="bAdd" OnClick="bAdd_Click">
                             <i class="fa fa-plus"></i> Add
                         </asp:LinkButton>
                     </div>
@@ -69,10 +69,10 @@
                                 <Columns>
                                     <asp:TemplateField ItemStyle-CssClass="text-center">
                                         <ItemTemplate>
-                                            <asp:LinkButton runat="server" ID="bDetailsTemp" CssClass="btn btn-link btn-sm" CommandArgument='<%# Eval("IDGroup") %>' OnClick="bDetailsTemp_Click">
+                                            <asp:LinkButton runat="server" ID="bDetailsTemp" CssClass="btn btn-link btn-sm text-purple" CommandArgument='<%# Eval("IDGroup") %>' OnClick="bDetailsTemp_Click">
                                                 Details
                                             </asp:LinkButton> | 
-                                            <asp:LinkButton runat="server" ID="bEditTemp" CssClass="btn btn-link btn-sm" CommandArgument='<%# Eval("IDGroup") %>' OnClick="bEditTemp_Click">
+                                            <asp:LinkButton runat="server" ID="bEditTemp" CssClass="btn btn-link btn-sm text-purple" CommandArgument='<%# Eval("IDGroup") %>' OnClick="bEditTemp_Click">
                                                 Edit
                                             </asp:LinkButton>
                                         </ItemTemplate>

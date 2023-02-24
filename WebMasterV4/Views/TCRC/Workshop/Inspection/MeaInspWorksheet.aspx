@@ -51,16 +51,16 @@
                                     </div>
                                     <hr>
                                     <div class="btn-group mt-4 mt-md-0" role="group" aria-label="Basic example">
-                                        <asp:LinkButton runat="server" CssClass="btn btn-soft-primary btn-sm mb-2" ID="bSearch" OnClick="bSearch_Click">
+                                        <asp:LinkButton runat="server" CssClass="btn btn-soft-purple btn-sm mb-2" ID="bSearch" OnClick="bSearch_Click">
                                             <i class="fa fa-search"></i> Search
                                         </asp:LinkButton>
-                                        <asp:LinkButton runat="server" CssClass="btn btn-soft-primary btn-sm mb-2" ID="bAddInsp" OnClick="bAddInsp_Click">
+                                        <asp:LinkButton runat="server" CssClass="btn btn-soft-purple btn-sm mb-2" ID="bAddInsp" OnClick="bAddInsp_Click">
                                             <i class="fa fa-plus"></i> Add Inspection
                                         </asp:LinkButton>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-2">
-                                            <asp:label runat="server" ID="bCount" CssClass="badge badge-soft-primary mb-3"></asp:label>
+                                            <asp:label runat="server" ID="bCount" CssClass="badge badge-soft-purple mb-3"></asp:label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -70,7 +70,7 @@
                                                     <Columns>
                                                         <asp:TemplateField ItemStyle-CssClass="text-center">
                                                             <ItemTemplate>
-                                                                <asp:LinkButton runat="server" ID="bDetailsTemp" CssClass="btn btn-link btn-sm" 
+                                                                <asp:LinkButton runat="server" ID="bDetailsTemp" CssClass="btn btn-link btn-sm text-purple" 
                                                                     CommandArgument='<%# Eval("WONo") %>' OnClick="bDetailsTemp_Click">
                                                                     Details
                                                                 </asp:LinkButton>
@@ -83,7 +83,7 @@
                                                         <asp:TemplateField HeaderText="Progress">
                                                             <ItemTemplate>
                                                                 <div class="progress" style="height: 20px;">
-                                                                    <div class="progress-bar" role="progressbar" style='<%# "width: " & Eval("InspCompletion") & "%" %>' 
+                                                                    <div class="progress-bar bg-soft-purple" role="progressbar" style='<%# "width: " & Eval("InspCompletion") & "%" %>' 
                                                                         aria-valuenow='<%# Eval("InspCompletion") %>' aria-valuemin="0" 
                                                                         aria-valuemax="100"><%# Eval("InspCompletion") %>%</div>
                                                                 </div>
@@ -109,7 +109,7 @@
                                     </div>
                                     <hr>
                                     <div class="btn-group mt-4 mt-md-0" role="group" aria-label="Basic example">
-                                        <asp:LinkButton runat="server" CssClass="btn btn-soft-primary btn-sm mb-2" ID="bSearchAft" OnClick="bSearchAft_Click">
+                                        <asp:LinkButton runat="server" CssClass="btn btn-soft-purple btn-sm mb-2" ID="bSearchAft" OnClick="bSearchAft_Click">
                                             <i class="fa fa-search"></i> Search
                                         </asp:LinkButton>
                                     </div>
@@ -125,7 +125,7 @@
                                                     <Columns>
                                                         <asp:TemplateField ItemStyle-CssClass="text-center">
                                                             <ItemTemplate>
-                                                                <asp:LinkButton runat="server" ID="bDetailsTemp" CssClass="btn btn-link btn-sm" 
+                                                                <asp:LinkButton runat="server" ID="bDetailsTemp" CssClass="btn btn-link btn-sm text-purple" 
                                                                     CommandArgument='<%# Eval("WONo") %>' OnClick="bDetailsTemp_Click">
                                                                     Details
                                                                 </asp:LinkButton>

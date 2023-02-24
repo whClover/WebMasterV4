@@ -33,8 +33,8 @@
             </div>
             <div class="modal-footer">
                 <span runat="server" id="lNotif" class="alert alert-warning" visible="false"></span>
-                <asp:Button ID="bSave" runat="server" Text="Save" CssClass="btn btn-primary btn-sm" OnClick="bSave_Click"/>
-                <asp:Button ID="Button1" runat="server" Text="Close" CssClass="btn btn-primary btn-sm" data-dismiss="modal" />
+                <asp:Button ID="bSave" runat="server" Text="Save" CssClass="btn btn-soft-purple btn-sm" OnClick="bSave_Click"/>
+                <asp:Button ID="Button1" runat="server" Text="Close" CssClass="btn btn-soft-purple btn-sm" data-dismiss="modal" />
             </div>
         </div>
     </div>

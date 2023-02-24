@@ -51,8 +51,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <asp:Button runat="server" CssClass="btn btn-soft-primary" ID="bSave" OnClick="bSave_Click" Text="Save" /> 
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <asp:Button runat="server" CssClass="btn btn-soft-purple" ID="bSave" OnClick="bSave_Click" Text="Save" /> 
+                <button type="button" class="btn btn-soft-purple" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

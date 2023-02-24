@@ -81,16 +81,16 @@
                     </div>
                     <div class="card-footer">
                         <div class="btn-group mt-4 mt-md-0" role="group" aria-label="Basic example">
-                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary mb-3" ID="bAdd" OnClick="bAdd_Click">
+                            <asp:LinkButton runat="server" CssClass="btn btn-soft-purple mb-3" ID="bAdd" OnClick="bAdd_Click">
                                 <i class="fa fa-plus"></i> Add Section
                             </asp:LinkButton>
-                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary mb-3" ID="bUpload" OnClick="bUpload_Click">
+                            <asp:LinkButton runat="server" CssClass="btn btn-soft-purple mb-3" ID="bUpload" OnClick="bUpload_Click">
                                 <i class="fa fa-upload"></i> Upload Template
                             </asp:LinkButton>
-                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary mb-3" ID="bShowSample" OnClick="bShowSample_Click">
+                            <asp:LinkButton runat="server" CssClass="btn btn-soft-purple mb-3" ID="bShowSample" OnClick="bShowSample_Click">
                                 <i class="fas fa-file-pdf"></i> Show Sample
                             </asp:LinkButton>
-                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary mb-3" ID="bBack" OnClick="bBack_Click">
+                            <asp:LinkButton runat="server" CssClass="btn btn-soft-purple mb-3" ID="bBack" OnClick="bBack_Click">
                                 <i class="fas fa-arrow-alt-circle-left"></i> Back
                             </asp:LinkButton>
                         </div>
@@ -99,11 +99,11 @@
                                 <Columns>
                                     <asp:TemplateField ItemStyle-CssClass="text-center" ItemStyle-Width="20%">
                                         <ItemTemplate>
-                                            <asp:Button runat="server" ID="bDetails" CssClass="btn btn-link btn-sm" Text="Details" 
+                                            <asp:Button runat="server" ID="bDetails" CssClass="btn btn-link btn-sm text-purple" Text="Details" 
                                                 sec='<%# Eval("SectionName") %>' OnClick="bDetails_Click" /> |
-                                            <asp:Button runat="server" ID="bEdit" CssClass="btn btn-link btn-sm" Text="Edit" 
+                                            <asp:Button runat="server" ID="bEdit" CssClass="btn btn-link btn-sm text-purple" Text="Edit" 
                                                 OnClick="bEdit_Click" seq='<%# Eval("SeqSection") %>' sec='<%# Eval("SectionName") %>' aftinsp='<%# Eval("AfterInspection") %>' /> |
-                                            <asp:Button runat="server" ID="bDelete" CssClass="btn btn-link btn-sm" Text="Delete" OnClientClick="return confirm('Are you sure?');"
+                                            <asp:Button runat="server" ID="bDelete" CssClass="btn btn-link btn-sm text-purple" Text="Delete" OnClientClick="return confirm('Are you sure?');"
                                                 Onclick="bDelete_Click" seq='<%# Eval("SeqSection") %>' sec='<%# Eval("SectionName") %>' />
                                         </ItemTemplate>
                                     </asp:TemplateField>

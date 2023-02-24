@@ -82,16 +82,16 @@
                     </div>
                     <div class="card-footer">
                         <div class="btn-group mt-4 mt-md-0" role="group" aria-label="Basic example">
-                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" ID="bAdd" OnClick="bAdd_Click">
+                            <asp:LinkButton runat="server" CssClass="btn btn-soft-purple" ID="bAdd" OnClick="bAdd_Click">
                                 <i class="fa fa-plus"></i> Add Sub-Section
                             </asp:LinkButton>
-                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" ID="bAddRef" OnClick="bAddRef_Click">
+                            <asp:LinkButton runat="server" CssClass="btn btn-soft-purple" ID="bAddRef" OnClick="bAddRef_Click">
                                 <i class="fa fa-plus"></i> Add Reference
                             </asp:LinkButton>
-                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" ID="bUploadPict" OnClick="bUploadPict_Click">
+                            <asp:LinkButton runat="server" CssClass="btn btn-soft-purple" ID="bUploadPict" OnClick="bUploadPict_Click">
                                 <i class="fa fas fa-paperclip"></i> Attach Section Picture
                             </asp:LinkButton>
-                            <asp:LinkButton runat="server" CssClass="btn btn-soft-primary" ID="bBack" OnClick="bBack_Click">
+                            <asp:LinkButton runat="server" CssClass="btn btn-soft-purple" ID="bBack" OnClick="bBack_Click">
                                 <i class="fas fa-arrow-alt-circle-left"></i> Back
                             </asp:LinkButton>
                         </div>
@@ -116,15 +116,15 @@
                                         <div class="card-title mb-2">Sub-Section: <%# Eval("SubSectionName") %></div>
                                     </div>
                                     <div>
-                                        <asp:LinkButton runat="server" CssClass="btn btn-soft-primary btn-sm" ID="bAddItem" OnClick="bAddItem_Click"
+                                        <asp:LinkButton runat="server" CssClass="btn btn-soft-purple btn-sm" ID="bAddItem" OnClick="bAddItem_Click"
                                             seqsubsection='<%#Eval("SeqSubSection") %>' subsection='<%# Eval("SubSectionName") %>'>
                                             <i class="fa fa-plus"></i> Add New Item
                                         </asp:LinkButton>
-                                        <asp:LinkButton runat="server" CssClass="btn btn-soft-primary btn-sm" ID="bEditSub" OnClick="bEditSub_Click" 
+                                        <asp:LinkButton runat="server" CssClass="btn btn-soft-purple btn-sm" ID="bEditSub" OnClick="bEditSub_Click" 
                                             seqsubsection='<%#Eval("SeqSubSection") %>' subsection='<%# Eval("SubSectionName") %>'>
                                             <i class="fa fa-edit"></i> Edit Sub-Section
                                         </asp:LinkButton>
-                                        <asp:LinkButton runat="server" CssClass="btn btn-soft-primary btn-sm" ID="bRemoveSub" OnClick="bRemoveSub_Click"
+                                        <asp:LinkButton runat="server" CssClass="btn btn-soft-purple btn-sm" ID="bRemoveSub" OnClick="bRemoveSub_Click"
                                             subsection='<%# Eval("SubSectionName") %>' OnClientClick="return confirm('Are you sure?');">
                                             <i class="fa fa-trash"></i> Remove Sub-Section
                                         </asp:LinkButton>
@@ -135,8 +135,8 @@
                                     <Columns>
                                         <asp:TemplateField ItemStyle-Width="10%" ItemStyle-CssClass="text-center">
                                             <ItemTemplate>
-                                                <asp:Button runat="server" ID="bEdit" CssClass="btn btn-link btn-sm" Text="Edit" OnClick="bEdit_Click" iddata='<%# Eval("IDDetail") %>' />
-                                                <asp:Button runat="server" ID="bRemove" CssClass="btn btn-link btn-sm" Text="Remove" OnClick="bRemove_Click" iddata='<%# Eval("IDDetail") %>' 
+                                                <asp:Button runat="server" ID="bEdit" CssClass="btn btn-link btn-sm text-purple" Text="Edit" OnClick="bEdit_Click" iddata='<%# Eval("IDDetail") %>' />
+                                                <asp:Button runat="server" ID="bRemove" CssClass="btn btn-link btn-sm text-purple" Text="Remove" OnClick="bRemove_Click" iddata='<%# Eval("IDDetail") %>' 
                                                     OnClientClick="return confirm('Are you sure?');"/>
                                             </ItemTemplate>
                                         </asp:TemplateField>
