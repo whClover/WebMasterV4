@@ -6,6 +6,7 @@ Imports System.IO
 Imports WebMasterV4.GlobalString
 Imports DocumentFormat.OpenXml.Math
 Imports System.Security.Policy
+Imports DocumentFormat.OpenXml.Wordprocessing
 
 Public Class Utility
     Public Shared Function evar(ByVal val As Object, ByVal valtype As Integer, Optional vallen As Integer = 255) As String
